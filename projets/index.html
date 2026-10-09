@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tous les projets · Rudy Houque</title>
+<meta name="description" content="Les projets d'objets connectés de Rudy Houque, classés par date, cadre et technologie.">
+<link rel="canonical" href="https://1kohm.fr/projets/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Tous les projets · Rudy Houque">
+<meta property="og:description" content="Les projets d'objets connectés de Rudy Houque, classés par date, cadre et technologie.">
+<meta property="og:url" content="https://1kohm.fr/projets/">
+<meta property="og:image" content="https://1kohm.fr/img/cintre/portants.jpg">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/archivo-wdth.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="/">1kohm<span>.</span>fr</a>
+    <nav class="nav">
+      <a href="/projets/">Projets</a>
+      <a href="/salons/">Salons &amp; veille</a>
+      <a href="/#parcours">Parcours</a>
+      <a href="/#contact">Contact</a>
+      <button class="theme" id="themeBtn" type="button">Mode sombre</button>
+    </nav>
+  </header>
+</div>
+
+<main id="p-tous">
+  <div class="wrap">
+    <div class="crumbs-l"><a href="/">← Retour à l'accueil</a></div>
+    <div class="head" style="margin-top:12px">
+      <h2 style="font-size:clamp(34px,5vw,56px)">Tous les projets</h2>
+      <p>Classés du plus récent au plus ancien. Filtrez par cadre ou par technologie.</p>
+    </div>
+    <div class="filters">
+      <div class="frow"><span class="flabel">Cadre</span><div class="chips" id="fCadre"></div></div>
+      <div class="frow"><span class="flabel">Technologie</span><div class="chips" id="fTech"></div></div>
+    </div>
+    <div class="plist" id="plist"></div>
+    <p class="pempty" id="pempty">Aucun projet ne correspond à ces filtres.</p>
+  </div>
+  <div class="wrap"><footer><span>1kohm.fr · Rudy Houque</span><a href="/mentions-legales/">Mentions légales</a></footer></div>
+</main>
+
+<div class="lb" id="lb" hidden><button class="nav-b prev" id="lbPrev" type="button" aria-label="Photo précédente">‹</button><figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption><div class="count" id="lbCount"></div>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>

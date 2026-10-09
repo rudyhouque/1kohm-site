@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Le cintre connecté des Galeries Lafayette · Rudy Houque</title>
+<meta name="description" content="Plus de 3 000 cintres connectés en Thread et RFID pour les Galeries Lafayette Champs-Élysées : architecture, tests, déploiement. Prix Argent Stratégies 2019.">
+<link rel="canonical" href="https://1kohm.fr/cintre-connecte/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Le cintre connecté des Galeries Lafayette · Rudy Houque">
+<meta property="og:description" content="Plus de 3 000 cintres connectés en Thread et RFID pour les Galeries Lafayette Champs-Élysées : architecture, tests, déploiement. Prix Argent Stratégies 2019.">
+<meta property="og:url" content="https://1kohm.fr/cintre-connecte/">
+<meta property="og:image" content="https://1kohm.fr/img/cintre/design-final.jpg">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/archivo-wdth.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body class="deep">
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="/">1kohm<span>.</span>fr</a>
+    <nav class="nav">
+      <a href="/projets/">Projets</a>
+      <a href="/salons/">Salons &amp; veille</a>
+      <a href="/#parcours">Parcours</a>
+      <a href="/#contact">Contact</a>
+      <button class="theme" id="themeBtn" type="button">Mode sombre</button>
+    </nav>
+  </header>
+</div>
+
+<main id="p-cintre" class="proj">
+  <div class="wrap">
+    <div class="crumbs"><a href="/projets/">← Tous les projets</a><span class="layers">Couche projet&nbsp; <i></i><i class="on"></i></span></div>
+
+    <div class="p-hero">
+      <div>
+        <div class="eyebrow">Retail · Galeries Lafayette Champs-Élysées · 2018 à 2019</div>
+        <h1>Le cintre connecté</h1>
+        <p>Un cintre qui affiche taille, prix et stock, et fait apporter votre taille en cabine en moins de 5 minutes.</p>
+      </div>
+      <figure class="pic zoom"><img src="/img/cintre/rudy.jpg" alt="Rudy Houque tenant un boîtier de cintre connecté dans le magasin"></figure>
+    </div>
+
+    <div class="pitchbox">
+      <figure class="pb-vis pic zoom"><img src="/img/cintre/design-final.jpg" alt="Rendu du design final du cintre connecté des Galeries Lafayette Champs-Élysées : écran rond affichant la taille 38 et le prix"></figure>
+      <div class="pb-txt"><span class="pb-eye">Le produit</span><h2>Le cintre qui renseigne le client à la place du vendeur</h2><p>Posé en rayon, il affiche le prix, la taille et la disponibilité de l'article qu'il porte. Un appui sur l'écran, et la taille demandée arrive en cabine d'essayage en moins de cinq minutes, sans chercher un vendeur. Pour le magasin, chaque cintre devient aussi un capteur : il sait combien de fois l'article a été pris en main, et à quelle heure.</p></div>
+      <ul class="pb-ben"><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7a2 2 0 1 1 2-2c0 1-2 1.5-2 3v1"/><path d="M12 9 3 16a1 1 0 0 0 .6 1.8h16.8a1 1 0 0 0 .6-1.8z"/></svg></span><div><b>Des rayons aérés</b><span>Une seule taille présentée par article</span></div></li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M12 3v18M10 12h0M14 12h0"/></svg></span><div><b>La taille en cabine</b><span>Livrée en moins de cinq minutes</span></div></li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><div><b>Des données par article</b><span>Nombre et heures de manipulation</span></div></li></ul>
+    </div>
+    <div class="kf">
+      <div><b>3 000+</b><span>cintres produits</span></div>
+      <div><b>2 600</b><span>en service dans le magasin</span></div>
+      <div><b>15 mois</b><span>du cahier des charges à la livraison</span></div>
+      <div><b>2 sem.</b><span>d'autonomie en moyenne</span></div>
+      <div><b>500 000</b><span>requêtes par jour sur le réseau</span></div>
+    </div>
+
+    <!-- L1 -->
+    <div class="lay">
+      <div class="lay-head"><code>L1</code><h2>Le projet</h2><span>pour tout le monde</span></div>
+      <dl class="story">
+        <div><dt>Besoin</dt><dd>En mars 2019, Galeries Lafayette ouvre un magasin de cinq étages sur les Champs-Élysées, dans l'ancien Virgin Megastore. Les portants y sont aérés et chaque article n'est présenté qu'en une taille. Le cahier des charges tient en cinq lignes : 5 000 cintres qui affichent la taille, le prix et le stock, et permettent de demander une autre taille. Les portants, déjà dessinés, ne devaient pas être modifiés.</dd></div>
+        <div><dt>Réponse</dt><dd>Un boîtier rond se clipse sur un cintre injecté en Italie. Il reconnaît le vêtement grâce à son étiquette RFID, se réveille quand on le touche et affiche taille, prix et disponibilité. Un appui sur l'écran prévient le stock, qui apporte la bonne taille en cabine en moins de 5 minutes. Autour du cintre, nous avons livré le réseau sans fil des cinq étages, les chariots et armoires de recharge et un tableau de bord.</dd></div>
+        <div><dt>Résultat</dt><dd>Plus de 3 000 cintres produits et jusqu'à 2 600 en service, quinze mois après un cahier des charges de cinq lignes. Avec plus de 2 000 objets sur un seul réseau Thread, l'installation allait au-delà de ce que le Thread Group avait testé en laboratoire. J'ai été invité à la présenter devant ses membres, réunis chez Siemens à Zoug.</dd></div>
+      </dl>
+
+    </div>
+
+    <div class="lay">
+      <div class="lay-head"><code>RÔLE</code><h2>Mon rôle</h2><span>responsabilités et compétences</span></div>
+      <div class="rolebox">
+        <div class="rb-intro">
+          <figure class="pic zoom rb-pic"><img loading="lazy" src="/img/cintre/workshop-rfid-rudy.jpg" alt="Animation de l'atelier RFID avec l'équipe du client"></figure>
+          <p class="lead">Directeur technique du projet chez BLUEGRioT, et interlocuteur technique central des Galeries Lafayette pendant quinze mois, du premier atelier à l'ouverture du magasin.</p>
+          <div class="skills"><h4>Compétences techniques</h4><div class="chips-s"><span>Architecture produit IoT</span><span>Thread / OpenThread</span><span>RFID HF et UHF</span><span>Basse consommation</span><span>Plans de test</span><span>Industrialisation</span></div><h4>Savoir-être</h4><div class="chips-s soft"><span>Pédagogie technique</span><span>Animation d'ateliers</span><span>Arbitrage et compromis</span><span>Coordination multi-équipes</span><span>Prise de parole en public</span><span>Persévérance sous pression</span></div></div>
+        </div>
+        <div class="rb-groups"><section class="rg"><h3>Architecture et conception</h3><ul><li>Décisions sur l'architecture globale du produit : réseau Thread, RFID bi-bande, recharge</li><li>Choix des composants électroniques</li><li>Ateliers de choix technologiques avec designers, développeurs et client</li></ul></section><section class="rg"><h3>Tests et validation</h3><ul><li>Mise en place des process de test</li><li>Rédaction des plans de test</li><li>Expériences de validation : observation des clients, montée en charge du réseau, essais de nuit en magasin</li></ul></section><section class="rg"><h3>Pilotage</h3><ul><li>Direction de l'équipe technique BLUEGRioT</li><li>Documents d'avancement, planning et suivi de la consommation des budgets</li><li>Échanges avec les distributeurs de composants</li></ul></section><section class="rg"><h3>Interfaces</h3><ul><li>Équipe projet cintre connecté des Galeries Lafayette</li><li>Directeurs des travaux du magasin : organisation des interventions, autorisations d'accès</li><li>Prestataires choisis par le client et partenaires Unistudio, RD2 Innovate, INEAT</li></ul></section><section class="rg"><h3>Représentation</h3><ul><li>Image de BLUEGRioT à l'extérieur sur ce projet</li><li>Présentations au client et aux partenaires</li><li>Sur scène devant le Thread Group, à Zoug</li></ul></section></div>
+      </div>
+    </div>
+
+    <!-- RÉCIT -->
+    <div class="lay">
+      <div class="lay-head"><code>L1</code><h2>L'histoire du projet</h2><span>cinq moments clés</span></div>
+
+      <article class="chap">
+        <div class="txt">
+          <span class="n">01</span>
+          <h3>Une démo plutôt qu'un rapport</h3>
+          <p>BLUEGRioT avait moins d'un an quand nous avons répondu à l'appel d'offres, face à des cabinets de conseil parisiens. Plutôt qu'une étude, nous avons passé une semaine à construire un prototype : un écran, un lecteur RFID, une batterie, deux vestes étiquetées.</p>
+          <p>Le jour de la soutenance, j'ai posé la première veste sur le cintre et sa fiche s'est affichée. Puis la seconde. Le client a choisi de travailler avec nous.</p>
+        </div>
+        <div class="imgs two">
+          <figure class="pic zoom wide"><img loading="lazy" src="/img/cintre/prototypage-cintre.jpg" alt="Un des premiers prototypes fonctionnels, avec un afficheur de taille"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/cintre/prot.jpg" alt="Premier prototype de carte, PCB usiné à l'atelier"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/cintre/cintre-concept.jpg" alt="Premières esquisses du cintre lors de l'atelier de design"></figure>
+        </div>
+      </article>
+
+      <article class="chap flip">
+        <div class="txt">
+          <span class="n">02</span>
+          <h3>Le portant auquel on ne touche pas</h3>
+          <p>Notre première architecture alimentait les cintres par les portants, en basse tension. Le magasin était encore en chantier, mais les portants étaient déjà dessinés par un designer et il était exclu d'y intégrer quoi que ce soit.</p>
+          <p>Chaque cintre devenait donc autonome, avec sa batterie, sa radio et sa recharge. Autre échéance : les routeurs devaient être posés au plafond six mois après le lancement, avant la fermeture des faux plafonds. Il fallait arrêter l'architecture réseau très tôt, et prévoir de pouvoir tout mettre à jour à distance.</p>
+        </div>
+        <div class="mosaic">
+          <figure class="pic zoom big"><img loading="lazy" src="/img/cintre/chantier.jpg" alt="Sur le chantier du magasin, casque sur la tête"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/cintre/chnatier-encoree.jpg" alt="Le grand escalier sous échafaudages"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/cintre/installation-routeurs.jpg" alt="Repérage de l'emplacement d'un routeur au plafond"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/cintre/img-7886.jpg" alt="Premiers tests réseau en tenue de chantier"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/cintre/chantier-encore.jpg" alt="Un étage du magasin en travaux"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/cintre/img_7648.jpg" alt="Un boîtier posé sur la rampe de l'escalier en chantier"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/cintre/flux.jpg" alt="Atelier sur l'implantation des cintres et des salles réseau"></figure>
+          <figure class="pic zoom wide"><img loading="lazy" src="/img/cintre/pleins.jpg" alt="Le même magasin, une fois ouvert"></figure>
+        </div>
+      </article>
+
+      <article class="chap">
+        <div class="txt">
+          <span class="n">03</span>
+          <h3>Une étiquette, deux fréquences</h3>
+          <p>Les étiquettes ne sont jamais au même endroit : dans le col, au bas d'une robe, nulle part sur un maillot de bain. J'ai organisé un atelier avec une dizaine de cintres équipés de lecteurs pour montrer au client les limites de chaque technologie.</p>
+          <p>L'UHF, déjà retenu pour les inventaires, lisait l'étiquette du voisin. Nous avons adopté des étiquettes bi-bande, avec le prestataire RFID du magasin. Le geste final est simple : on tapote l'étiquette contre le cintre.</p>
+        </div>
+        <div class="imgs two">
+          <figure class="pic zoom wide"><img loading="lazy" src="/img/cintre/workshop-rfid-rudy.jpg" alt="Atelier RFID : démonstration d'un lecteur à l'équipe du client"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/cintre/workshop-rfid.jpg" alt="Un cintre prototype équipé d'un lecteur, pendant l'atelier"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/cintre/elec.jpg" alt="Essais de lecture sur des vêtements du magasin"></figure>
+          <figure class="pic zoom wide"><img loading="lazy" src="/img/cintre/etiquette-rfid.jpg" alt="L'étiquette finale, avec sa puce RFID bi-bande"></figure>
+        </div>
+      </article>
+
+      <article class="chap flip">
+        <div class="txt">
+          <span class="n">04</span>
+          <h3>Le 129ᵉ cintre</h3>
+          <p>Au bureau, le réseau tenait avec plusieurs dizaines de cintres. En magasin, il s'effondrait sans prévenir au-delà d'une centaine. Le jour, le magasin était un chantier ; nous venions donc la nuit, en train depuis Lille, les cartons de cintres à la main, sur des Champs-Élysées secoués par les manifestations des gilets jaunes.</p>
+          <p>Chaque semaine, une nouvelle version du logiciel, jusqu'à la V19. Le magasin a ouvert avec 800 cintres qui tenaient tant qu'aucun routeur n'en accueillait un 129ᵉ. Quelques jours plus tard, nous avons trouvé la cause, dans la pile réseau des routeurs.</p>
+        </div>
+        <div class="mosaic">
+          <figure class="pic zoom big"><img loading="lazy" src="/img/cintre/test-cintre-bureau.jpg" alt="Des dizaines de cartes en test au bureau"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/cintre/les-routeurs-noirs-er-blancs.jpg" alt="Les routeurs Thread en test au bureau"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/cintre/thread-network.jpg" alt="Visualisation du maillage du réseau Thread"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/cintre/cintres-bureau.jpg" alt="Montée en charge au bureau"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/cintre/v19.jpg" alt="Tests de la version 19 du logiciel embarqué"></figure>
+          <figure class="pic zoom wide"><img loading="lazy" src="/img/cintre/mise-a-jour-des-cintres.jpg" alt="Mise à jour des cintres, en équipe"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/cintre/mise-a-jour-cintres.jpg" alt="Mise à jour des cintres, en pleine nuit dans le magasin"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/cintre/test-chantiers.jpg" alt="Une carte de test posée au milieu du chantier"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/cintre/tout-premier-cintre-prend-le-train.jpg" alt="Le tout premier cintre prend le train pour Paris"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/cintre/carton-cintres.jpg" alt="Un carton de cintres chargés, prêt pour le magasin"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/cintre/transport-cintres-metro.jpg" alt="Les cartons de cintres dans le métro"></figure>
+          <figure class="pic zoom wide"><img loading="lazy" src="/img/cintre/tour-eiffel.jpg" alt="Livraison à pied devant la tour Eiffel, le métro étant fermé pour la visite du président chinois"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/cintre/dodo.jpg" alt="Une pause, en pleine nuit, dans le magasin"></figure>
+          <figure class="pic zoom wide"><img loading="lazy" src="/img/cintre/cafe-citron.jpg" alt="Seul au Citron, le restaurant Jacquemus, au milieu de la nuit"></figure>
+        </div>
+      </article>
+
+      <article class="chap">
+        <div class="txt">
+          <span class="n">05</span>
+          <h3>Les Champs-Élysées, puis Zoug</h3>
+          <p>Une boule à facettes portée par une grue au-dessus de l'avenue, une mortadelle record entrée par la fenêtre, et nos cintres entre les mains des invités, de Simon Porte Jacquemus à Brigitte Macron. Une fois le correctif installé, nous sommes passés à 800 puis à plus de 2 000 cintres.</p>
+          <p>En voyant notre message sur LinkedIn, Grant Erickson, ingénieur chez Google et membre du Thread Group, nous a contactés : personne n'avait encore testé un réseau Thread de cette taille. Il m'a invité à présenter le projet devant les membres du groupe, après Siemens et Google. La même année, le projet a reçu le prix Argent du Grand Prix Stratégies de l'expérience client.</p>
+        </div>
+        <div class="mosaic">
+          <figure class="pic zoom big"><img loading="lazy" src="/img/cintre/boule-a-facettes.jpg" alt="Une boule à facettes portée par une grue au-dessus des Champs-Élysées, le soir de l'inauguration"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/cintre/brigitte-macron-et-le-cintre.jpg" alt="Brigitte Macron découvre le cintre connecté"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/cintre/bruno-lemaire-et-le-cintre.jpg" alt="Bruno Le Maire devant un portant équipé"></figure>
+          <figure class="pic zoom wide"><img loading="lazy" src="/img/cintre/rudy-simon.jpg" alt="Avec Simon Porte Jacquemus"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/cintre/simon-cintre.jpg" alt="Simon Porte Jacquemus et une de ses créations sur notre cintre"></figure>
+          <figure class="pic zoom wide"><img loading="lazy" src="/img/cintre/mortadelle.jpg" alt="La plus grosse mortadelle du monde, entrée par une fenêtre"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/cintre/prix-de-l-experience.jpg" alt="Prix Argent, Grand Prix Stratégies de l'expérience client 2019"></figure>
+          <figure class="pic zoom wide"><img loading="lazy" src="/img/cintre/thread-zoug-3.jpg" alt="Zoug, novembre 2019 : sur scène devant les membres du Thread Group, « 1st floor with about 1800 devices »"></figure>
+          <figure class="pic zoom wide"><img loading="lazy" src="/img/cintre/thread-zoug-4.jpg" alt="Zoug : la salle du Thread Group Member Meeting"></figure>
+          <figure class="pic zoom wide"><img loading="lazy" src="/img/cintre/thread-zoug-5.jpg" alt="Zoug : démonstration des cintres aux membres du Thread Group"></figure>
+          <figure class="pic zoom wide"><img loading="lazy" src="/img/cintre/thread-zoug-2.jpg" alt="Zoug : l'équipe devant le stand du Thread Group"></figure>
+        </div>
+      </article>
+    </div>
+
+    <!-- L2 -->
+    <div class="lay">
+      <div class="lay-head"><code>L2</code><h2>Conception</h2><span>pour l'équipe technique</span></div>
+      <div class="board-title" style="padding-top:0">Architecture matérielle</div>
+      <div class="hwgrid"><div class="hw"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg></span><div><b>Radio et calcul</b><p>Nordic nRF52840, réseau Thread maillé, veille profonde entre deux manipulations</p></div></div><div class="hw"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21V11"/><circle cx="12" cy="9" r="2"/><path d="M7.8 13.2a6 6 0 0 1 0-8.4M16.2 4.8a6 6 0 0 1 0 8.4M5 16a10 10 0 0 1 0-14M19 2a10 10 0 0 1 0 14"/></svg></span><div><b>Antenne</b><p>Antenne PCB 2,4 GHz</p></div></div><div class="hw"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.5 11.5 3H20v8.5L11.5 20 3 11.5z" /><circle cx="16" cy="7" r="1.5"/><path d="M8 12a3 3 0 0 1 4-4M6 14a6 6 0 0 1 8-8"/></svg></span><div><b>Lecture de l'étiquette</b><p>Lecteur RFID HF / NFC ST25R3911B, antenne boucle sur le PCB</p></div></div><div class="hw"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span><div><b>Présence du vêtement</b><p>Capteur temps de vol VL53L0X orienté vers le bas</p></div></div><div class="hw"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="4" width="8" height="16" rx="2"/><path d="M4 9c-1 1.8-1 4.2 0 6M20 9c1 1.8 1 4.2 0 6"/></svg></span><div><b>Réveil au toucher</b><p>Accéléromètre</p></div></div><div class="hw"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span><div><b>Affichage</b><p>Écran rectangulaire caché derrière une face fumée ronde</p></div></div><div class="hw"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V11"/><path d="M12 10.5a1.5 1.5 0 0 1 3 0V12a1.5 1.5 0 0 1 3 0v3a6 6 0 0 1-6 6h-.5a6 6 0 0 1-5-2.7L4.3 15a1.5 1.5 0 0 1 2.4-1.8L9 15"/></svg></span><div><b>Navigation</b><p>Touches tactiles rétroéclairées en forme de flèches</p></div></div><div class="hw"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg></span><div><b>Statut pour le personnel</b><p>LED vers un guide de lumière surmoulé dans le cintre</p></div></div><div class="hw"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="17" height="10" rx="2"/><path d="M22 11v2M6 10v4M9.5 10v4M13 10v4"/></svg></span><div><b>Énergie</b><p>Li-Po 3,7 V 950 mAh, recharge par pastilles du PCB</p></div></div></div>
+
+      <div class="serie">
+        <div class="board-title">Du prototype à la série</div>
+        <div class="step">
+          <div class="st"><span class="n">1</span><h3>Interface</h3><p>L'écran est un rectangle standard, caché derrière une face fumée ronde. Les flèches de navigation sont des LED derrière des touches tactiles. L'œil voit un écran rond ; la nomenclature reste bon marché.</p></div>
+          <div class="strip">
+            <figure class="pic zoom"><img loading="lazy" src="/img/cintre/design-element-graphiques-du-cintre.jpg" alt="Conception des éléments graphiques affichés par le cintre"></figure>
+            <figure class="pic zoom"><img loading="lazy" src="/img/cintre/etrange-ressemblance-avec-totoro.jpg" alt="Routage du PCB rond. Une étrange ressemblance avec Totoro"></figure>
+            <figure class="pic zoom"><img loading="lazy" src="/img/cintre/dsc_4704.jpg" alt="Recherche de forme sur tablette"></figure>
+            <figure class="pic zoom"><img loading="lazy" src="/img/cintre/presentation.jpg" alt="Revue de conception avec l'équipe design"></figure>
+          </div>
+        </div>
+        <div class="step">
+          <div class="st"><span class="n">2</span><h3>Mise au point</h3><p>Chaque version passe d'abord sur le banc : affichage, radio, mesure de batterie, puis recherche et connexion au réseau Thread.</p></div>
+          <div class="strip">
+            <figure class="pic zoom"><img loading="lazy" src="/img/cintre/programmation-cintre.jpg" alt="Programmation et mesures sur le banc de test"></figure>
+            <figure class="pic zoom"><img loading="lazy" src="/img/cintre/ecrabn.jpg" alt="Mise au point de l'affichage sur carte de développement"></figure>
+            <figure class="pic zoom"><img loading="lazy" src="/img/cintre/cintre-v7.jpg" alt="Version 7 du logiciel : version, batterie, réseau"></figure>
+            <figure class="pic zoom"><img loading="lazy" src="/img/cintre/cintre-network-found.jpg" alt="Network found : le cintre a rejoint le réseau Thread"></figure>
+          </div>
+        </div>
+        <div class="step">
+          <div class="st"><span class="n">3</span><h3>Électronique de série</h3><p>Un PCB rond qui porte le nRF52840, le lecteur ST25R3911B, les capteurs et l'antenne, au-dessus d'une cellule lithium. Les premières cartes de série arrivent en mallette, puis l'assemblage passe aux centaines.</p></div>
+          <div class="strip">
+            <figure class="pic zoom"><img loading="lazy" src="/img/cintre/pcb-prod.jpg" alt="Carte de série dans son boîtier, avec la nappe de l'écran"></figure>
+            <figure class="pic zoom"><img loading="lazy" src="/img/cintre/cintre-batterie.jpg" alt="Dos de la carte et cellule lithium 3,7 V 950 mAh"></figure>
+            <figure class="pic zoom"><img loading="lazy" src="/img/cintre/premier-production-de-premiere-version-des-cintres.jpg" alt="Premières cartes de série de la première version"></figure>
+            <figure class="pic zoom"><img loading="lazy" src="/img/cintre/asse.jpg" alt="Assemblage des boîtiers"></figure>
+          </div>
+        </div>
+        <div class="step">
+          <div class="st"><span class="n">4</span><h3>Plasturgie</h3><p>Le corps du cintre est injecté chez Magnetti, en Italie, avec le guide de lumière et l'anneau de clipsage surmoulés. Nous avons réglé l'opacité de la face avant pour masquer l'écran, et testé la tampographie du logo.</p></div>
+          <div class="strip">
+            <figure class="pic zoom"><img loading="lazy" src="/img/cintre/moule-injection-cintre.jpg" alt="Le moule d'injection"></figure>
+            <figure class="pic zoom"><img loading="lazy" src="/img/cintre/essais-injection-plastique.jpg" alt="Premières pièces injectées"></figure>
+            <figure class="pic zoom"><img loading="lazy" src="/img/cintre/ajustements-opacite-vitre-avant-injection.jpg" alt="Réglage de l'opacité de la face avant"></figure>
+            <figure class="pic zoom"><img loading="lazy" src="/img/cintre/test-tempographie-injection-marque-glce.jpg" alt="Essai de tampographie du logo Galeries Lafayette Champs-Élysées"></figure>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="spec" style="grid-template-columns:1fr 1fr">
+        <div class="board">
+          <h4>Logique embarquée</h4>
+          <ol class="logic">
+            <li><span>Le cintre dort. L'accéléromètre le réveille quand un client le touche.</span></li>
+            <li><span>Il interroge la base, puis affiche taille, prix et stock.</span></li>
+            <li><span>Le capteur de temps de vol vérifie qu'un vêtement est suspendu. Vide plus de 10 secondes, le cintre oublie le vêtement et sa LED clignote en blanc pour le personnel.</span></li>
+            <li><span>Un employé tapote l'étiquette contre le cintre pour l'appairer à nouveau.</span></li>
+            <li><span>Deux fois par jour, le cintre envoie un résumé des 12 dernières heures : manipulations, horaires, vêtement porté.</span></li>
+          </ol>
+        </div>
+        <figure class="pic zoom" style="aspect-ratio:auto"><img loading="lazy" src="/img/cintre/hell.jpg" alt="Premier démarrage d'un cintre en salle réseau, écran affichant la recherche du réseau" style="max-height:420px"><figcaption style="padding:0 12px 12px">Premier démarrage en salle réseau : version, batterie, recherche du réseau.</figcaption></figure>
+      </div>
+
+      <div class="hard" style="margin-top:44px">
+        <article>
+          <span class="n">Point délicat 1</span>
+          <h3>RFID HF ou UHF</h3>
+          <p>Le magasin avait déjà choisi l'UHF pour ses inventaires. Dans un cintre, un lecteur UHF lit aussi l'étiquette du vêtement voisin, coûte 10 à 20 fois plus cher qu'un lecteur HF et consomme de l'ordre de 1 à 2 W, contre quelques milliampères en HF.</p>
+          <p>J'ai proposé des étiquettes bi-bande : une seule puce mémoire reliée à une antenne HF et à une antenne UHF. Après des essais avec le prestataire RFID du magasin, le client a changé ses imprimantes et son procédé d'étiquetage. Le cintre lit en HF à quelques centimètres, et l'inventaire continue en UHF.</p>
+          <table class="cmp">
+            <tr><th></th><th>HF 13,56 MHz</th><th>UHF</th></tr>
+            <tr><th>Portée</th><td class="ok">5 à 10 cm</td><td>plusieurs mètres</td></tr>
+            <tr><th>Sélectivité</th><td class="ok">le vêtement porté</td><td>lit les voisins</td></tr>
+            <tr><th>Consommation</th><td class="ok">quelques mA</td><td>1 à 2 W</td></tr>
+            <tr><th>Coût lecteur</th><td class="ok">1×</td><td>10 à 20×</td></tr>
+          </table>
+        </article>
+        <article>
+          <span class="n">Point délicat 2</span>
+          <h3>Le 129ᵉ cintre</h3>
+          <p>Au bureau, des dizaines de cintres fonctionnaient sur quelques routeurs. En magasin, le réseau tombait de façon aléatoire. Nous avons d'abord soupçonné notre propre firmware et livré une version par semaine, jusqu'à la V19.</p>
+          <p>En saturant volontairement un seul routeur au bureau, nous avons isolé la cause : la pile Thread des routeurs débordait au 129ᵉ end device, alors que la documentation en annonçait 256. Le correctif de Google a été installé à distance sur les routeurs déjà fixés au plafond, grâce à la mise à jour sans fil prévue dès la pose.</p>
+          <table class="cmp">
+            <tr><th></th><th>Avant correctif</th><th>Après correctif</th></tr>
+            <tr><th>End devices par routeur</th><td>128 (256 annoncés)</td><td class="ok">256</td></tr>
+            <tr><th>Cintres en service</th><td>800</td><td class="ok">2 000+</td></tr>
+          </table>
+        </article>
+      </div>
+
+      <div class="recharge">
+        <div class="imgs">
+          <figure class="pic zoom"><img loading="lazy" src="/img/cintre/chariot-cintre.jpg" alt="Le chariot de recharge, 50 boîtiers par plateau"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/cintre/centaines.jpg" alt="Des centaines de cintres en recharge"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/cintre/chariot-cintres.jpg" alt="Un plateau du chariot, 50 emplacements"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/cintre/outil-de-retrait-du-cintre.jpg" alt="L'outil de retrait du boîtier"></figure>
+        </div>
+        <div class="txt">
+          <h3>Recharger 2 600 cintres sans toucher aux portants</h3>
+          <p>Le boîtier se déclipse avec un outil dédié. La nuit, il se recharge dans une armoire de socles. Entre 9 h et 10 h, avant l'ouverture, seuls les cintres à recharger clignotent en rouge : un employé fait le tour avec un chariot de boîtiers pleins, 50 par plateau, et les remplace en 45 minutes environ.</p>
+          <p>L'autonomie dépend du vêtement : de 4 jours pour un article très manipulé à un mois pour un autre, 2 semaines en moyenne.</p>
+          <p class="recul"><b>Avec le recul</b>Nous avons mis toute notre énergie dans le cintre et sous-estimé les socles de recharge. Des lamelles ressort qui devaient simplement faire contact nous ont demandé des heures de maquettes. Aujourd'hui, je traiterais la recharge comme un produit à part entière dès le début.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRESSE -->
+    <div class="lay">
+      <div class="lay-head"><code>REF</code><h2>Presse et vidéos</h2><span>sources externes</span></div>
+      <div class="press">
+        <a href="https://www.strategies.fr/creations/bluegriot-pour-galeries-lafayette-champs-elysees-cintre-connecte" target="_blank" rel="noopener"><span class="lg mono">St</span><span class="pt"><span class="src">Stratégies</span><b>Prix Argent, Grand Prix de l'expérience client</b><span>2019, usage innovant de la technologie</span></span></a>
+        <a href="https://blog.nordicsemi.com/getconnected/thread-connected-hangers-in-a-parisian-boutique" target="_blank" rel="noopener"><span class="lg" style="color:#00A9CE"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m11.3384 12.4477 12.0796 6.9917-2.8939 1.73-1.92 1.0924c-.2979.1987-.5627.298-.8938.1656h-.033c-.0331 0-.0663 0-.0994-.0331L6.1572 15.8067v6.72c-.2453 0-.3825-.0384-.5627-.1324L.5627 19.448C.2317 19.2495 0 18.8853 0 18.488V5.8713l10.7656 6.2395.5728.3369zm5.7544-10.7733-4.4662 2.5522 4.4662 2.5965V1.6744zm6.0465 2.546-4.4359-2.5489c-.2648-.1324-.5627-.1986-.8606-.1986v6.6538l-9.9642-5.793-1.1255-.629c-.4966-.2649-.9269-.298-1.4234-.0663L3.3765 2.7971.8607 4.2536c-.331.1986-.5628.4634-.7283.8276l.2437.1412 3.2623 1.8908 7.4234 4.3024-.6586-.3817.7385.428.577.3392 5.0774 2.939 6.9976 4.0502.107.062c.0662-.2318.0993-.6536.0993-.6536V5.7101c0-.629-.331-1.1917-.8607-1.4896zM6.9073 22.2528l4.4525-2.5792-4.4526-2.5683v5.1475z"/></svg></span><span class="pt"><span class="src">Nordic Semiconductor</span><b>Thread connected hangers in a Parisian boutique</b><span>16 octobre 2019</span></span></a>
+        <a href="https://www.threadgroup.org/BLUEGRioT" target="_blank" rel="noopener"><span class="lg mono">Th</span><span class="pt"><span class="src">Thread Group</span><b>Étude de cas BLUEGRioT</b><span>Plus de 2 000 cintres sur un réseau Thread</span></span></a>
+        <a href="https://www.rfidjournal.com/news/smart-hangers-with-nfc-help-shoppers-find-their-fit/154147/" target="_blank" rel="noopener"><span class="lg mono">RJ</span><span class="pt"><span class="src">RFID Journal</span><b>Smart Hangers With NFC Help Shoppers Find Their Fit</b><span>6 mars 2020</span></span></a>
+        <a href="https://www.maddyness.com/2020/12/09/bluegriot-revolutionne-marche-iot/" target="_blank" rel="noopener"><span class="lg mono">M</span><span class="pt"><span class="src">Maddyness</span><b>Le bureau d'études BLUEGRioT</b><span>9 décembre 2020</span></span></a>
+        <a href="https://www.unistudio.design/portfolio/galeries-lafayette/" target="_blank" rel="noopener"><span class="lg mono">U</span><span class="pt"><span class="src">Unistudio</span><b>Le design du cintre</b><span>Portfolio du studio partenaire</span></span></a>
+      </div>
+      <div class="sub">Vidéos</div>
+      <div class="press">
+        <a class="vid" href="https://www.youtube.com/watch?v=lnoef0l1BvM" target="_blank" rel="noopener"><span class="th"><img loading="lazy" src="/img/cintre/mini-pilot-thread.jpg" alt=""><span class="yt"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></span></span><span class="pt"><span class="src">Thread Group</span><b>Pilot Project Thread Connected Hanger</b><span>Démonstration commentée, en anglais</span></span></a>
+        
+        <a class="vid" href="https://www.youtube.com/watch?v=09cy4jzl3QE" target="_blank" rel="noopener"><span class="th"><img loading="lazy" src="/img/cintre/portants.jpg" alt=""><span class="yt"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></span></span><span class="pt"><span class="src">YouTube</span><b>Smart hangers, Galeries Lafayette</b><span>Le cintre en magasin</span></span></a>
+        <a class="vid" href="https://www.youtube.com/watch?v=ZCzRY8ip520" target="_blank" rel="noopener"><span class="th"><img loading="lazy" src="/img/cintre/design-final.jpg" alt=""><span class="yt"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></span></span><span class="pt"><span class="src">BLUEGRioT</span><b>Galeries Lafayette, cintre connecté</b><span>Présentation du projet</span></span></a>
+        <a class="vid" href="https://www.youtube.com/watch?v=iPtVXVrNRRA" target="_blank" rel="noopener"><span class="th"><img loading="lazy" src="/img/cintre/rudy.jpg" alt=""><span class="yt"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></span></span><span class="pt"><span class="src">BLUEGRioT</span><b>Smart Hanger</b><span>Cintres connectés</span></span></a>
+      </div>
+    </div>
+
+    <!-- COULISSES -->
+    <div class="lay">
+      <div class="lay-head"><code>+</code><h2>Coulisses</h2><span>un magasin hors norme</span></div>
+      <div class="masonry">
+        <figure class="pic zoom"><img loading="lazy" src="/img/cintre/licornes-2.jpg" alt="Un des corners de marque du magasin"></figure>
+        <figure class="pic zoom"><img loading="lazy" src="/img/cintre/rudy-et-le-cintre.jpg" alt="Le cintre en main"></figure>
+        <figure class="pic zoom"><img loading="lazy" src="/img/cintre/cabines.jpg" alt="Les cabines d'essayage, où arrivent les tailles demandées"></figure>
+        <figure class="pic zoom"><img loading="lazy" src="/img/cintre/stmicro.jpg" alt="Le cintre exposé par STMicroelectronics sur un salon à Paris"></figure>
+        <figure class="pic zoom"><img loading="lazy" src="/img/cintre/chargeurs.jpg" alt="Socles de recharge en cours de mise au point"></figure>
+        <figure class="pic zoom"><img loading="lazy" src="/img/cintre/roul.jpg" alt="Préparation des plateaux en mousse du chariot"></figure>
+        <figure class="pic zoom"><img loading="lazy" src="/img/cintre/bfm.jpg" alt="Passage sur BFM, inventer l'objet connecté de demain"></figure>
+      </div>
+    </div>
+
+    <div class="next"><span>Projet suivant</span><a href="/choose/">#Choose, la chaussure caméléon →</a></div>
+  </div>
+  <div class="wrap"><footer><span>1kohm.fr · Rudy Houque</span><a href="/mentions-legales/">Mentions légales</a></footer></div>
+</main>
+
+<div class="lb" id="lb" hidden><button class="nav-b prev" id="lbPrev" type="button" aria-label="Photo précédente">‹</button><figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption><div class="count" id="lbCount"></div>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>
