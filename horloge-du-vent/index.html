@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="fr" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>L'Horloge du vent, la météo des spots au mur · Rudy Houque</title>
+<meta name="description" content="Électronique et logiciel embarqué de L'Horloge du vent : moteurs pas à pas double axe, recalage optique des aiguilles, deux modèles de cartes pour toutes les cartes géographiques, tests menés avec des agents d'intelligence artificielle.">
+<link rel="canonical" href="https://1kohm.fr/horloge-du-vent/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="L'Horloge du vent, la météo des spots au mur · Rudy Houque">
+<meta property="og:description" content="Électronique et logiciel embarqué de L'Horloge du vent : moteurs pas à pas double axe, recalage optique des aiguilles, deux modèles de cartes pour toutes les cartes géographiques, tests menés avec des agents d'intelligence artificielle.">
+<meta property="og:url" content="https://1kohm.fr/horloge-du-vent/">
+<meta property="og:image" content="https://1kohm.fr/img/horloge/horloge-bleu-marine.jpg">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/archivo-wdth.woff2" as="font" type="font/woff2" crossorigin>
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="stylesheet" href="/assets/site.css?v=20261015k">
+</head>
+<body>
+<a class="skip" href="#p-horloge">Aller au contenu</a>
+<div class="sysbar"><div class="wrap"><div><span>SYS / 1KOHM.FR / v1.0</span><span class="sys-geo">50.63 N · 3.06 E · LILLE</span><span><i class="dot" aria-hidden="true">●</i> conseil et expertise</span></div></div></div>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="/" aria-label="1kΩhm.fr, accueil">1k<span>Ω</span>hm.fr</a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="/projets/" aria-current="true"><b>[01]</b> projets</a>
+      <a href="/salons/"><b>[02]</b> salons</a>
+      <a href="/#parcours"><b>[03]</b> parcours</a>
+      <a href="/#contact"><b>[04]</b> contact</a>
+    </nav>
+    <button class="theme" id="themeBtn" type="button">mode sombre</button>
+  </header>
+</div>
+
+<main class="view" id="p-horloge">
+  <div class="wrap">
+    <div class="crumbs"><a href="/projets/">← Tous les projets</a><span class="id"><b>PRJ-06</b> / 06</span></div>
+
+    <div class="p-hero">
+      <div>
+        <div class="eyebrow"><b>PRJ-06</b> · Objet connecté · Projet personnel · 2026</div>
+        <h1>L'Horloge du vent, la météo des spots au mur</h1>
+        <p>Douze aiguilles qui affichent le vent des trois prochains jours. J'ai repris l'électronique d'un prototype pour qu'il puisse être fabriqué en série, en testant au passage de nouvelles façons de travailler avec l'IA.</p>
+      </div>
+      <figure class="pic zoom"><img fetchpriority="high" src="/img/horloge/designer-cerclage.jpg" style="object-position:60% 0%" alt="Le designer produit tient le cerclage en bois de l'horloge devant son modèle 3D"></figure>
+    </div>
+
+    <div class="pitchbox">
+      <figure class="pb-vis pic zoom"><img src="/img/horloge/horloge-bleu-marine.jpg" style="object-fit:contain;background:#FBFAF9" alt="L'Horloge du vent : carte de la côte méditerranéenne, trois flèches de spots et trois cadrans de vent dans un cerclage en bois"></figure>
+      <div class="pb-txt"><span class="pb-eye">Le produit</span><h2>Le vent de vos spots, d'un coup d'œil</h2><p>Une horloge murale qui affiche la force et la direction du vent sur vos spots préférés, pour aujourd'hui et les deux jours suivants. Plus besoin d'ouvrir trois applications avant de charger la voiture : un regard en passant suffit pour savoir si ça vaut le coup de sortir la planche. La carte imprimée est celle de votre côte, choisie dans une bibliothèque ou composée sur mesure.</p></div>
+      <ul class="pb-ben"><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.5-6-11a6 6 0 0 1 12 0c0 5.5-6 11-6 11z"/><circle cx="12" cy="10" r="2"/></svg></span><div><b>Votre côte, vos spots</b><span>Une carte choisie dans la bibliothèque, ou composée en ligne</span></div></li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h11a3 3 0 1 0-3-3M3 12h15a3 3 0 1 1-3 3M3 16h7"/></svg></span><div><b>Trois jours de prévisions</b><span>Force du vent et rafales, aujourd'hui, demain et après-demain</span></div></li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><b>Sans appli ni écran</b><span>Des aiguilles, comme une horloge, fabriquée en Normandie</span></div></li></ul>
+    </div>
+    <div class="kf">
+      <div><small>AIGUILLES</small><b>12 → 9</b><span>douze aiguilles animées par neuf blocs moteurs</span></div>
+      <div><small>CARTES</small><b>2</b><span>modèles de cartes électroniques pour toutes les cartes géographiques</span></div>
+      <div><small>PRÉVISIONS</small><b>3 jours</b><span>de vent et de rafales, sur trois cadrans</span></div>
+      <div><small>PRÉCOMMANDES</small><b>327</b><span>sur Ulule au 15 octobre 2026, 261 % de l'objectif</span></div>
+      <div><small>LIVRAISON</small><b>Fév. 2027</b><span>première série prévue</span></div>
+    </div>
+
+    <!-- L1 -->
+    <div class="lay">
+      <div class="lay-head"><code>L1</code><h2>Le projet</h2><span>pour tout le monde</span></div>
+      <dl class="story">
+        <div><dt>Besoin</dt><dd>Antoine, entrepreneur à Caen, veut afficher au mur les prévisions de vent de ses spots. Son équipe a construit un prototype qui fonctionne, avec des servomoteurs, des engrenages imprimés en 3D et des modules électroniques du commerce. Mais quatre piles ne tiennent que quelques heures, et rien dans cet assemblage ne peut être fabriqué en série.</dd></div>
+        <div><dt>Réponse</dt><dd>Avec un designer produit, mon ancien associé de BLUEGRioT, nous avons repensé l'objet pour la série. Je me suis chargé de l'électronique et du logiciel embarqué : des moteurs qui intègrent leur propre mécanique, deux modèles de cartes seulement, un recalage optique des aiguilles. Et j'ai développé et testé avec des agents d'intelligence artificielle.</dd></div>
+        <div><dt>Résultat</dt><dd>Après une carte d'essai réduite validée fonction par fonction, la carte à l'architecture définitive est dessinée et commandée. La campagne Ulule, ouverte jusqu'au 27 octobre 2026, compte 327 précommandes au 15 octobre, soit 261 % de l'objectif. Les premières livraisons sont prévues en février 2027.</dd></div>
+      </dl>
+    </div>
+
+    <div class="lay">
+      <div class="lay-head"><code>RÔLE</code><h2>Mon rôle</h2><span>responsabilités et compétences</span></div>
+      <div class="rolebox">
+        <div class="rb-intro">
+          <figure class="pic zoom rb-pic"><img loading="lazy" src="/img/horloge/rudy-labo.jpg" style="object-position:65% 45%" alt="Rudy Houque dans son petit laboratoire, au garage, où il prototype ses cartes"></figure>
+          <p class="lead">Conception électronique et logiciel embarqué, à titre personnel et bénévole, en binôme avec un designer produit. Chaque choix de composant est un compromis avec l'architecture du produit : nous les prenons ensemble. C'est aussi un projet réel pour me former aux méthodes de conception assistées par l'IA.</p>
+          <div class="skills"><h3 class="sk-h">Compétences techniques</h3><div class="chips-s"><span>Architecture électronique</span><span>Moteurs pas à pas</span><span>Capteurs optiques</span><span>Bus I2C</span><span>ESP32</span><span>Conception pour la série</span><span>Plans de test</span><span>Développement assisté par IA</span></div><h3 class="sk-h">Savoir-être</h3><div class="chips-s soft"><span>Capacité d'adaptation</span><span>Binôme design et électronique</span><span>Pédagogie de l'industrialisation</span><span>Autoformation</span></div></div>
+        </div>
+        <div class="rb-groups"><section class="rg"><h3>Architecture et conception</h3><ul><li>Choix du moteur double axe et de sa variante simple axe</li><li>Découpage en une carte cadrans et des cartes spot, chaînées sur un bus</li><li>Alimentation par piles ou USB-C, protégée si les deux sont branchés</li></ul></section><section class="rg"><h3>Prototypage</h3><ul><li>Essais sur plaque d'essai, puis cartes usinées à l'atelier</li><li>Impression à l'échelle 1 pour valider les empreintes des moteurs</li><li>Le réveil du vent : carte réduite qui reprend 90 % des fonctions</li><li>Carte à l'architecture définitive</li></ul></section><section class="rg"><h3>Tests et validation</h3><ul><li>Plan de test complet, écrit pendant la fabrication de la carte</li><li>Interface de test web générée par l'IA, servie par la carte</li><li>Banc de test piloté par un agent, en conception</li></ul></section><section class="rg"><h3>Interfaces</h3><ul><li>Le designer produit, pour chaque compromis de taille et d'assemblage</li><li>Antoine, porteur du projet, pour les choix d'usage</li></ul></section></div>
+      </div>
+    </div>
+
+    <!-- RÉCIT -->
+    <div class="lay">
+      <div class="lay-head"><code>L1</code><h2>L'histoire du projet</h2><span>cinq moments clés</span></div>
+
+      <article class="chap">
+        <div class="txt">
+          <span class="n">01</span>
+          <h3>Un prototype qui fonctionne, mais ne se fabrique pas</h3>
+          <p>Mon ancien associé suivait sur Instagram les vidéos d'Antoine. Le prototype avançait, la commercialisation semblait proche. Avec notre regard d'industrialisation, nous y voyions surtout des servomoteurs, des engrenages imprimés en 3D, des pièces de maintien sur mesure et des piles vides en quelques heures. Nous lui avons proposé une visio pour partager nos inquiétudes.</p>
+          <p>J'ai connu la même situation il y a dix ans avec <a href="/choose/">la chaussure #Choose</a> : un prototype réussi, pensé sans la série. Cette fois, j'avais les mots pour l'expliquer. Moins il reste de gestes à la main, plus il devient réaliste de fabriquer en France.</p>
+        </div>
+        <div class="imgs two">
+          <figure class="pic zoom"><img loading="lazy" src="/img/horloge/prototype-initial.jpg" alt="Le prototype de départ : servomoteurs, engrenages imprimés en 3D et câblage sur un fond en bois"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/horloge/prototype-initial-2.jpg" alt="Le même prototype vu de dessus : trois cadrans, chacun entraîné par ses propres servomoteurs"></figure>
+        </div>
+      </article>
+
+      <article class="chap flip">
+        <div class="txt">
+          <span class="n">02</span>
+          <h3>Douze aiguilles, neuf moteurs</h3>
+          <p>Chaque cadran superpose trois indications sur un même axe : la direction du vent avec une flèche, sa force et ses rafales avec deux disques. J'ai d'abord trouvé des micromoteurs pas à pas d'appareil photo, minuscules et sobres. Mais ils sont livrés en vrac : douze à souder à la main, plus des engrenages pour imbriquer les axes.</p>
+          <p>Le designer m'a alors montré des moteurs de tableau de bord de voiture, à double axe, avec toute leur micromécanique intégrée. Grâce à une roue libre qu'il a imaginée, un seul axe suffit pour la force et les rafales. Douze aiguilles, neuf blocs moteurs, posés par une machine. Je les ai validés sur plaque d'essai, pilotés directement par le microcontrôleur.</p>
+        </div>
+        <div class="imgs two">
+          <figure class="pic zoom wide"><img loading="lazy" src="/img/horloge/servo-et-moteur.jpg" alt="À gauche, un servomoteur du prototype non industrialisable ; à droite, le micromoteur pas à pas retenu pour la série"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/horloge/architecture-cadrans.jpg" style="object-fit:contain;background:#d9d9d9" alt="Modèle 3D des trois cadrans : flèche, disque de force du vent et disque des rafales sur la carte électronique"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/horloge/cadran-essai.jpg" alt="Cadran d'essai : flèche de direction et échelle de force du vent en nœuds, sur une carte du Cap Gris-Nez"></figure>
+        </div>
+      </article>
+
+      <article class="chap">
+        <div class="txt">
+          <span class="n">03</span>
+          <h3>Deux cartes pour toutes les côtes</h3>
+          <p>Antoine veut une bibliothèque de cartes géographiques, et même des cartes composées par chaque acheteur. Les trois cadrans restent toujours à la même place, mais les flèches des spots changent de position d'une carte à l'autre. Le designer a défini une grille de positions possibles, reprise par le configurateur en ligne.</p>
+          <p>De mon côté, j'ai séparé l'électronique en deux : une carte pour les cadrans et une petite carte par spot, à peine plus grande que son moteur. Elles se chaînent sur un même bus avec des câbles standard. Les cartes spot sont identiques, seule leur adresse change, fixée à l'assemblage. Deux modèles de cartes à produire, quelle que soit la côte.</p>
+        </div>
+        <div class="imgs two">
+          <figure class="pic zoom wide"><img loading="lazy" src="/img/horloge/reunion-conception.jpg" alt="Réunion de conception de l'horloge : le designer produit et moi, avec un cadran d'essai et les premières cartes"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/horloge/matrice-spots.jpg" alt="Modèle 3D de l'horloge : la carte cadrans et la grille des positions possibles pour les cartes spot"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/horloge/configurateur.jpg" style="object-fit:contain;background:#fff" alt="Le configurateur en ligne : on place ses spots sur la carte, la flèche se cale sur la position disponible la plus proche"></figure>
+        </div>
+      </article>
+
+      <article class="chap flip">
+        <div class="txt">
+          <span class="n">04</span>
+          <h3>Prototyper à l'atelier</h3>
+          <p>Avant de commander une carte, je teste chaque fonction séparément. Il faut commander vingt-quatre lignes de moteurs avec une dizaine de broches disponibles : j'ai d'abord vérifié sur plaque d'essai que des extensions d'entrées-sorties savaient piloter les moteurs à la bonne cadence. Pour aller vite, j'usine moi-même des cartes simples sur ma petite fraiseuse numérique. Un moteur peut alors tourner des heures pendant que je vérifie qu'il ne perd pas de pas.</p>
+          <p>Pendant le dessin de la carte, j'imprime le circuit à l'échelle 1 sur une feuille A4 et j'y enfonce un vrai moteur. En quelques minutes, je sais si l'empreinte que j'ai dessinée est juste, sans attendre une fabrication.</p>
+        </div>
+        <div class="mosaic">
+          <figure class="pic zoom big"><img loading="lazy" src="/img/horloge/cnc-usinage.jpg" alt="Ma petite fraiseuse numérique usine une carte d'essai dans une plaque cuivrée"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/horloge/io-extender.jpg" alt="Essai des moteurs pas à pas pilotés par une extension d'entrées-sorties, sur plaque d'essai"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/horloge/impression-a4.jpg" alt="Le circuit imprimé à l'échelle 1 sur une feuille A4, un moteur enfoncé pour valider son empreinte"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/horloge/carte-usinee.jpg" alt="Une carte d'essai usinée à l'atelier, tenue à la main devant la fraiseuse"></figure>
+          <figure class="pic zoom wide"><img loading="lazy" src="/img/horloge/essai-moteur.jpg" alt="Premier essai d'un bloc moteur, câblé sur une plaque d'essai"></figure>
+        </div>
+      </article>
+
+      <article class="chap">
+        <div class="txt">
+          <span class="n">05</span>
+          <h3>Le réveil du vent, une carte testée avec l'IA</h3>
+          <p>J'ai ensuite dessiné une carte réduite, un spot et un cadran, qui reprend 90 % des fonctions de l'horloge sur un petit format pour accélérer les essais. Nous l'avons surnommée le réveil du vent. Pendant sa fabrication, j'ai écrit son plan de test complet : chaque broche, chaque adresse, chaque valeur de composant. Je l'ai confié à un agent d'IA spécialisé dans le développement, en lui demandant une interface de test servie par la carte elle-même, dans une simple page web.</p>
+          <p>À la réception, je cliquais sur « tester le buzzer » et j'entendais le bip. Je faisais tourner chaque moteur dans un sens, puis dans l'autre. Un radar affichait ce que voit la cellule optique sur un tour complet : en vert, l'absence d'aiguille, en orange, l'endroit où elle passe. Chaque fonction se validait d'un clic, sans journal à déchiffrer. J'ai été bluffé par le temps gagné.</p>
+        </div>
+        <div class="imgs two">
+          <figure class="pic zoom"><img loading="lazy" src="/img/horloge/carte-cadran.jpg" alt="Le réveil du vent : la carte réduite, un spot et un cadran, avec les composants définitifs"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/horloge/routage-reveil.jpg" alt="Le routage du réveil du vent dans le logiciel de conception"></figure>
+          <figure class="pic zoom wide"><img loading="lazy" src="/img/horloge/interface-test.jpg" style="object-fit:contain;background:#1b1d22" alt="Le radar de la cellule optique : en vert, l'absence d'aiguille ; en orange, l'endroit où elle a été détectée"></figure>
+        </div>
+      </article>
+    </div>
+
+    <!-- L2 -->
+    <div class="lay">
+      <div class="lay-head"><code>L2</code><h2>Conception</h2><span>pour l'équipe technique</span></div>
+      <div class="board-title" style="padding-top:0">Architecture matérielle</div>
+      <div class="hwgrid"><div class="hw"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg></span><div><b>Cerveau</b><p>ESP32 en Wi-Fi, programmé avec le cadre de développement du fabricant</p></div></div><div class="hw"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2"/><path d="M12 4v4"/></svg></span><div><b>Mouvement</b><p>Moteurs pas à pas de tableau de bord, en version double axe et simple axe</p></div></div><div class="hw"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h4M16 12h4"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3"/></svg></span><div><b>Recalage</b><p>Cellule optique infrarouge par réflexion, à travers la carte imprimée</p></div></div><div class="hw"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/><circle cx="8" cy="7" r="1"/><circle cx="14" cy="12" r="1"/><circle cx="10" cy="17" r="1"/></svg></span><div><b>Commande</b><p>Extensions d'entrées-sorties et petits drivers moteurs, avec diodes de roue libre</p></div></div><div class="hw"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="9" width="5" height="6" rx="1"/><rect x="16" y="9" width="5" height="6" rx="1"/><path d="M8 12h8"/></svg></span><div><b>Liaison</b><p>Bus I2C chaîné par câbles standard à cinq fils, adresse fixée à l'assemblage</p></div></div><div class="hw"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="17" height="10" rx="2"/><path d="M22 11v2M6 10v4M9.5 10v4"/></svg></span><div><b>Énergie</b><p>Quatre piles ou USB-C, protection si les deux sont branchés, mise à jour de secours par USB</p></div></div><div class="hw"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="1.5"/><circle cx="8" cy="8" r="1"/><circle cx="16" cy="8" r="1"/><circle cx="8" cy="16" r="1"/><circle cx="16" cy="16" r="1"/></svg></span><div><b>Test</b><p>Composants sur une seule face, points de test regroupés au dos pour le banc</p></div></div></div>
+
+      <div class="hard" style="margin-top:44px">
+        <article>
+          <span class="n">Point délicat 1</span>
+          <h3>Retrouver le nord sans aimant</h3>
+          <p>Un moteur pas à pas ne sait pas où il est : s'il saute un pas, l'aiguille dérive sans que personne ne s'en aperçoive. Il faut un recalage régulier, comme sur une imprimante 3D. Sur les cadrans, la carte imprimée sépare la flèche de l'électronique. Un capteur magnétique aurait traversé le papier, mais il demandait un aimant dans chaque flèche, posé à la main, tout près des aimants des moteurs.</p>
+          <p>Nous avons choisi une cellule optique infrarouge, à travers un petit perçage discret de la carte imprimée. La flèche blanche reflète la lumière en passant : rien à ajouter sur la pièce injectée. Le réglage s'est joué au dixième de millimètre, dans l'empilement de la carte, des disques et de la flèche.</p>
+          <table class="cmp">
+            <tr><th>Option</th><th>Conséquence</th></tr>
+            <tr><th>Capteur magnétique</th><td>un aimant par flèche, posé à la main</td></tr>
+            <tr><th>Cellule optique</th><td class="ok">rien à ajouter sur la flèche</td></tr>
+          </table>
+        </article>
+        <article>
+          <span class="n">Point délicat 2</span>
+          <h3>Un banc de test qui voit et qui entend</h3>
+          <p>Sur la carte d'essai, l'agent envoyait son code et c'est moi qui lui confirmais que le buzzer avait sonné. Je conçois maintenant un banc de test où il n'aura plus besoin de moi : chaque point de test relié à un instrument de mesure, un micro pour entendre le buzzer, une caméra face aux voyants. L'agent pourra écrire du code, le charger, vérifier le résultat et recommencer seul.</p>
+          <p>Un second agent pourrait développer le logiciel embarqué pendant que le premier le teste, les deux dialoguant entre eux. Le même banc servira en production, pour programmer, tester et tracer chaque carte. Il est en cours de conception.</p>
+        </article>
+      </div>
+
+      <div class="recharge">
+        <div class="imgs">
+          <figure class="pic zoom"><img loading="lazy" src="/img/horloge/horloge-salon.jpg" alt="L'Horloge du vent accrochée dans un salon"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/horloge/horloge-posee.jpg" alt="L'Horloge du vent assemblée, cerclage en bois et carte bleu marine"></figure>
+        </div>
+        <div class="txt">
+          <h3>Éprouver l'IA sur un vrai produit</h3>
+          <p>Mon métier change avec ces outils. Plutôt que de les découvrir sur des exercices, je les mets à l'épreuve sur un objet qui doit sortir en série : logiciel embarqué, plan de test, interface de validation. L'agent va vite quand le document qu'il reçoit est précis. Le brochage, les adresses et les valeurs que j'écris en amont font toute la différence.</p>
+          <p class="recul"><b>Avec le recul</b>Pour la production, aucun code écrit par l'IA ne partira sans relecture ni sans passage sur le banc. Mon rôle est de tester ces usages, d'en tirer des méthodes de travail, puis de les transmettre à une équipe.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- LIENS -->
+    <div class="lay">
+      <div class="lay-head"><code>REF</code><h2>Liens</h2><span>sources externes</span></div>
+      <div class="press">
+        <a href="https://fr.ulule.com/collecte-hdv/" target="_blank" rel="noopener"><span class="lg mono">U</span><span class="pt"><span class="src">Ulule</span><b>L'Horloge du Vent : le vent sur le mur en un coup d'œil</b><span>Campagne de précommande, septembre à octobre 2026</span></span></a>
+        <a href="https://www.tendanceouest.com/actualite-433764-caen-il-invente-une-horloge-du-vent-pratique-et-magnifique-ca-n-existe-nulle-part-ailleurs" target="_blank" rel="noopener"><span class="lg mono">TO</span><span class="pt"><span class="src">Tendance Ouest</span><b>Caen : il invente une horloge du vent</b><span>19 novembre 2025</span></span></a>
+        <a href="https://www.horlogeduvent.com" target="_blank" rel="noopener"><span class="lg mono">HV</span><span class="pt"><span class="src">L'Horloge du vent</span><b>Le site du produit</b><span>horlogeduvent.com</span></span></a>
+      </div>
+    </div>
+
+    <div class="next"><span>Projet suivant</span><a href="/cintre-connecte/">Le cintre connecté →</a></div>
+  </div>
+</main>
+<footer class="foot"><div class="wrap"><div><span>EOF · 1kohm.fr · Rudy Houque</span><span>1 kΩ : la résistance de base de tout montage</span><a href="/mentions-legales/">mentions légales</a></div></div></footer>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Visionneuse photo"><button class="close" id="lbClose" type="button">fermer [échap]</button><button class="nav-b prev" id="lbPrev" type="button" aria-label="Photo précédente">‹</button><figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption><div class="count" id="lbCount"></div></figure><button class="nav-b next-b" id="lbNext" type="button" aria-label="Photo suivante">›</button></div>
+<script src="/assets/site.js?v=20261015k" defer></script>
+</body>
+</html>

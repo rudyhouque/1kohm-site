@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -14,25 +14,28 @@
 <meta property="og:image" content="https://1kohm.fr/img/autres/ces-2026-7.jpg">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/assets/fonts/archivo-wdth.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="stylesheet" href="/assets/site.css?v=20261015k">
 </head>
-<body class="deep">
+<body>
+<a class="skip" href="#p-salons">Aller au contenu</a>
+<div class="sysbar"><div class="wrap"><div><span>SYS / 1KOHM.FR / v1.0</span><span class="sys-geo">50.63 N · 3.06 E · LILLE</span><span><i class="dot" aria-hidden="true">●</i> conseil et expertise</span></div></div></div>
 <div class="wrap">
   <header class="top">
-    <a class="brand" href="/">1kohm<span>.</span>fr</a>
-    <nav class="nav">
-      <a href="/projets/">Projets</a>
-      <a href="/salons/">Salons &amp; veille</a>
-      <a href="/#parcours">Parcours</a>
-      <a href="/#contact">Contact</a>
-      <button class="theme" id="themeBtn" type="button">Mode sombre</button>
+    <a class="brand" href="/" aria-label="1kΩhm.fr, accueil">1k<span>Ω</span>hm.fr</a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="/projets/"><b>[01]</b> projets</a>
+      <a href="/salons/" aria-current="page"><b>[02]</b> salons</a>
+      <a href="/#parcours"><b>[03]</b> parcours</a>
+      <a href="/#contact"><b>[04]</b> contact</a>
     </nav>
+    <button class="theme" id="themeBtn" type="button">mode sombre</button>
   </header>
 </div>
 
-<main id="p-salons" class="proj">
+<main class="view" id="p-salons">
   <div class="wrap">
-    <div class="crumbs"><a href="/#veille">← Retour à l'accueil</a><span class="layers">Salons &amp; veille&nbsp; <i></i><i class="on"></i></span></div>
+    <div class="crumbs"><a href="/#veille">← Retour à l'accueil</a><span class="id"><b>[02]</b> salons et veille</span></div>
 
     <div class="p-hero">
       <div>
@@ -40,7 +43,7 @@
         <h1>Du stand à la scène</h1>
         <p>Visiteur au CES dès 2015, exposant en 2016 avec BLUEGRioT à Las Vegas puis au CES Asia, j'y suis revenu comme média accrédité, puis comme juge des Innovation Awards. Je couvre aussi VivaTech comme ambassadeur média.</p>
       </div>
-      <figure class="pic zoom"><img src="/img/autres/ces-2026-10.jpg" alt="Sur scène au CES 2026, devant la salle, pour le débrief du salon"></figure>
+      <figure class="pic zoom"><img fetchpriority="high" src="/img/autres/ces-2026-10.jpg" alt="Sur scène au CES 2026, devant la salle, pour le débrief du salon"></figure>
     </div>
 
     <div class="roles">
@@ -218,10 +221,10 @@
 
     <div class="next"><span>Voir aussi</span><a href="/#projets">Les projets →</a></div>
   </div>
-  <div class="wrap"><footer><span>1kohm.fr · Rudy Houque</span><a href="/mentions-legales/">Mentions légales</a></footer></div>
 </main>
+<footer class="foot"><div class="wrap"><div><span>EOF · 1kohm.fr · Rudy Houque</span><span>1 kΩ : la résistance de base de tout montage</span><a href="/mentions-legales/">mentions légales</a></div></div></footer>
 
-<div class="lb" id="lb" hidden><button class="nav-b prev" id="lbPrev" type="button" aria-label="Photo précédente">‹</button><figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption><div class="count" id="lbCount"></div>
-<script src="/assets/site.js" defer></script>
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Visionneuse photo"><button class="close" id="lbClose" type="button">fermer [échap]</button><button class="nav-b prev" id="lbPrev" type="button" aria-label="Photo précédente">‹</button><figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption><div class="count" id="lbCount"></div></figure><button class="nav-b next-b" id="lbNext" type="button" aria-label="Photo suivante">›</button></div>
+<script src="/assets/site.js?v=20261015k" defer></script>
 </body>
 </html>

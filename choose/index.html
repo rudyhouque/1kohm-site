@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -14,33 +14,36 @@
 <meta property="og:image" content="https://1kohm.fr/img/choose/produit.jpg">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/assets/fonts/archivo-wdth.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="stylesheet" href="/assets/site.css?v=20261015k">
 </head>
-<body class="deep">
+<body>
+<a class="skip" href="#p-choose">Aller au contenu</a>
+<div class="sysbar"><div class="wrap"><div><span>SYS / 1KOHM.FR / v1.0</span><span class="sys-geo">50.63 N · 3.06 E · LILLE</span><span><i class="dot" aria-hidden="true">●</i> conseil et expertise</span></div></div></div>
 <div class="wrap">
   <header class="top">
-    <a class="brand" href="/">1kohm<span>.</span>fr</a>
-    <nav class="nav">
-      <a href="/projets/">Projets</a>
-      <a href="/salons/">Salons &amp; veille</a>
-      <a href="/#parcours">Parcours</a>
-      <a href="/#contact">Contact</a>
-      <button class="theme" id="themeBtn" type="button">Mode sombre</button>
+    <a class="brand" href="/" aria-label="1kΩhm.fr, accueil">1k<span>Ω</span>hm.fr</a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="/projets/" aria-current="true"><b>[01]</b> projets</a>
+      <a href="/salons/"><b>[02]</b> salons</a>
+      <a href="/#parcours"><b>[03]</b> parcours</a>
+      <a href="/#contact"><b>[04]</b> contact</a>
     </nav>
+    <button class="theme" id="themeBtn" type="button">mode sombre</button>
   </header>
 </div>
 
-<main id="p-choose" class="proj">
+<main class="view" id="p-choose">
   <div class="wrap">
-    <div class="crumbs"><a href="/projets/">← Tous les projets</a><span class="layers">Couche projet&nbsp; <i></i><i class="on"></i></span></div>
+    <div class="crumbs"><a href="/projets/">← Tous les projets</a><span class="id"><b>PRJ-02</b> / 06</span></div>
 
     <div class="p-hero">
       <div>
-        <div class="eyebrow">Chaussure connectée · Éram · Phoceis puis BLUEGRioT · 2015 à 2017</div>
+        <div class="eyebrow"><b>PRJ-02</b> · Chaussure connectée · Éram · Phoceis puis BLUEGRioT · 2015 à 2017</div>
         <h1>#Choose, la chaussure caméléon</h1>
         <p>Une chaussure qui change de couleur depuis le smartphone, pour l'accorder à sa tenue du jour. Du prototype bricolé au CES de Las Vegas, puis en boutique.</p>
       </div>
-      <figure class="pic zoom"><img src="/img/choose/vegas.jpg" alt="À Las Vegas pour le CES 2016, la basket #Choose en main"></figure>
+      <figure class="pic zoom"><img fetchpriority="high" src="/img/choose/vegas.jpg" alt="À Las Vegas pour le CES 2016, la basket #Choose en main"></figure>
     </div>
 
     <div class="pitchbox">
@@ -49,11 +52,11 @@
       <ul class="pb-ben"><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18c1.1 0 1.6-.9 1.2-1.8-.5-1-.1-2.2 1.1-2.2H17a4 4 0 0 0 4-4c0-5.5-4-10-9-10z"/><circle cx="7.5" cy="11" r="1.2"/><circle cx="10" cy="7" r="1.2"/><circle cx="14.5" cy="7" r="1.2"/></svg></span><div><b>La couleur de votre tenue</b><span>Choisie en un geste sur le smartphone</span></div></li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 3 6 13h5l-1 8 7-10h-5z"/></svg></span><div><b>Recharge sans fil</b><span>Posée sur son socle à induction</span></div></li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V10l5 3V10l5 3V7l8 4v10z"/><path d="M3 21h18"/></svg></span><div><b>Fabriquée en France</b><span>Dans les ateliers Éram</span></div></li></ul>
     </div>
     <div class="kf">
-      <div><b>2</b><span>versions : une sandale, puis une basket</span></div>
-      <div><b>3 mois</b><span>du salon de Lille au CES de Las Vegas</span></div>
-      <div><b>150</b><span>paires en édition limitée chez Éram, en 2017</span></div>
-      <div><b>TF1, M6</b><span>et France 3, reportages pendant le CES</span></div>
-      <div><b>1</b><span>entreprise née du projet : BLUEGRioT</span></div>
+      <div><small>VERSIONS</small><b>2</b><span>versions : une sandale, puis une basket</span></div>
+      <div><small>DÉLAI</small><b>3 mois</b><span>du salon de Lille au CES de Las Vegas</span></div>
+      <div><small>SÉRIE</small><b>150</b><span>paires en édition limitée chez Éram, en 2017</span></div>
+      <div><small>TÉLÉVISION</small><b>TF1, M6</b><span>et France 3, reportages pendant le CES</span></div>
+      <div><small>SUITE</small><b>1</b><span>entreprise née du projet : BLUEGRioT</span></div>
     </div>
 
     <div class="lay">
@@ -71,7 +74,7 @@
         <div class="rb-intro">
           <figure class="pic zoom rb-pic"><img loading="lazy" src="/img/choose/rudy-soudure.jpg" alt="Soudure de l'électronique d'un prototype"></figure>
           <p class="lead">J'ai imaginé le projet et porté toute la partie objet connecté, du premier échantillon de textile jusqu'aux démonstrations sur le stand du CES.</p>
-          <div class="skills"><h4>Compétences techniques</h4><div class="chips-s"><span>Bluetooth Low Energy</span><span>Prototypage électronique</span><span>Textile lumineux</span><span>Recharge par induction</span><span>Intégration dans un produit</span></div><h4>Savoir-être</h4><div class="chips-s soft"><span>Initiative</span><span>Démonstration et prise de parole</span><span>Sang-froid</span></div></div>
+          <div class="skills"><h3 class="sk-h">Compétences techniques</h3><div class="chips-s"><span>Bluetooth Low Energy</span><span>Prototypage électronique</span><span>Textile lumineux</span><span>Recharge par induction</span><span>Intégration dans un produit</span></div><h3 class="sk-h">Savoir-être</h3><div class="chips-s soft"><span>Initiative</span><span>Démonstration et prise de parole</span><span>Sang-froid</span></div></div>
         </div>
         <div class="rb-groups"><section class="rg"><h3>Conception</h3><ul><li>Choix du Bluetooth Low Energy, avec les développeurs mobiles de l'agence</li><li>Recherche du textile et visite de Brochier Technologies</li><li>Électronique logée dans la semelle, recharge par induction</li></ul></section><section class="rg"><h3>Prototypage avec Éram</h3><ul><li>Deux versions conçues avec les ateliers de Montjean-sur-Loire</li><li>Essais de collage et de couture de la fibre sur le cuir</li><li>Préparation des paires pour le salon de Lille puis pour le CES</li></ul></section><section class="rg"><h3>Démonstration et presse</h3><ul><li>Mise en scène avec le studio Unistudio</li><li>Dossier de presse en ligne, photos et vidéos en haute définition</li><li>Démonstrations en français et en anglais, interviews télévisées</li></ul></section></div>
       </div>
@@ -118,10 +121,10 @@
 
     <div class="next"><span>Projet suivant</span><a href="/cintre-connecte/">Le cintre connecté →</a></div>
   </div>
-  <div class="wrap"><footer><span>1kohm.fr · Rudy Houque</span><a href="/mentions-legales/">Mentions légales</a></footer></div>
 </main>
+<footer class="foot"><div class="wrap"><div><span>EOF · 1kohm.fr · Rudy Houque</span><span>1 kΩ : la résistance de base de tout montage</span><a href="/mentions-legales/">mentions légales</a></div></div></footer>
 
-<div class="lb" id="lb" hidden><button class="nav-b prev" id="lbPrev" type="button" aria-label="Photo précédente">‹</button><figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption><div class="count" id="lbCount"></div>
-<script src="/assets/site.js" defer></script>
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Visionneuse photo"><button class="close" id="lbClose" type="button">fermer [échap]</button><button class="nav-b prev" id="lbPrev" type="button" aria-label="Photo précédente">‹</button><figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption><div class="count" id="lbCount"></div></figure><button class="nav-b next-b" id="lbNext" type="button" aria-label="Photo suivante">›</button></div>
+<script src="/assets/site.js?v=20261015k" defer></script>
 </body>
 </html>

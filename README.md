@@ -1,6 +1,6 @@
 # 1kohm.fr
 
-Portfolio de Rudy Houque, ingénieur électronique et objets connectés.
+Portfolio de Rudy Houque, directeur technique en objets connectés : conseil et expertise.
 
 Site statique (HTML, CSS, JS), hébergé chez OVH et déployé automatiquement à chaque `git push` sur `main`.
 

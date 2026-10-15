@@ -1,6 +1,11 @@
 # Généré pour l'hébergement OVH
 ErrorDocument 404 /404.html
 RewriteEngine On
+# fichiers internes du dépôt : jamais servis
+RedirectMatch 404 /\.(git|github|impeccable)(/|$)
+<FilesMatch "\.(md|py|gitignore)$">
+  Require all denied
+</FilesMatch>
 RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{HTTP_HOST} ^www\.1kohm\.fr$ [NC]
@@ -8,7 +13,12 @@ RewriteRule ^ https://1kohm.fr%{REQUEST_URI} [L,R=301]
 <IfModule mod_expires.c>
   ExpiresActive On
   ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
   ExpiresByType font/woff2 "access plus 1 year"
   ExpiresByType text/css "access plus 1 week"
   ExpiresByType application/javascript "access plus 1 week"
+</IfModule>
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript text/javascript image/svg+xml application/xml text/xml
 </IfModule>

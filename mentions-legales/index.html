@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -14,24 +14,28 @@
 <meta property="og:image" content="https://1kohm.fr/img/autres/portrait-vert.jpg">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/assets/fonts/archivo-wdth.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="stylesheet" href="/assets/site.css?v=20261015k">
 </head>
 <body>
+<a class="skip" href="#legal">Aller au contenu</a>
+<div class="sysbar"><div class="wrap"><div><span>SYS / 1KOHM.FR / v1.0</span><span class="sys-geo">50.63 N · 3.06 E · LILLE</span><span><i class="dot" aria-hidden="true">●</i> conseil et expertise</span></div></div></div>
 <div class="wrap">
   <header class="top">
-    <a class="brand" href="/">1kohm<span>.</span>fr</a>
-    <nav class="nav">
-      <a href="/projets/">Projets</a>
-      <a href="/salons/">Salons &amp; veille</a>
-      <a href="/#parcours">Parcours</a>
-      <a href="/#contact">Contact</a>
-      <button class="theme" id="themeBtn" type="button">Mode sombre</button>
+    <a class="brand" href="/" aria-label="1kΩhm.fr, accueil">1k<span>Ω</span>hm.fr</a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="/projets/"><b>[01]</b> projets</a>
+      <a href="/salons/"><b>[02]</b> salons</a>
+      <a href="/#parcours"><b>[03]</b> parcours</a>
+      <a href="/#contact"><b>[04]</b> contact</a>
     </nav>
+    <button class="theme" id="themeBtn" type="button">mode sombre</button>
   </header>
 </div>
 
-<main id="legal">
-  <div class="wrap legal">
+<main class="view" id="legal">
+  <div class="wrap"><div class="legal">
+    <p class="kicker">&gt; DOC · MENTIONS_LÉGALES</p>
     <h1>Mentions légales</h1>
     <h2>Éditeur du site</h2>
     <p>Rudy Houque, personne physique. Contact : <a class="mail" data-u="hello" data-d="1kohm.fr" href="#">hello [arobase] 1kohm.fr</a>.</p>
@@ -44,11 +48,11 @@
     <p>Ce site ne dépose aucun cookie de mesure d'audience ou de publicité et ne collecte aucune donnée personnelle. Les polices de caractères sont hébergées sur le site lui-même. Le choix du thème clair ou sombre est mémorisé dans votre navigateur et n'est transmis à personne.</p>
     <p>Les liens vers des sites externes (LinkedIn, YouTube, presse) vous font quitter ce site ; leurs propres règles de confidentialité s'appliquent alors.</p>
     <p>Pour toute question, vous pouvez écrire à l'adresse indiquée ci-dessus.</p>
-  </div>
-  <div class="wrap"><footer><span>1kohm.fr · Rudy Houque</span><a href="/mentions-legales/">Mentions légales</a></footer></div>
+  </div></div>
 </main>
+<footer class="foot"><div class="wrap"><div><span>EOF · 1kohm.fr · Rudy Houque</span><span>1 kΩ : la résistance de base de tout montage</span><a href="/mentions-legales/">mentions légales</a></div></div></footer>
 
-<div class="lb" id="lb" hidden><button class="nav-b prev" id="lbPrev" type="button" aria-label="Photo précédente">‹</button><figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption><div class="count" id="lbCount"></div>
-<script src="/assets/site.js" defer></script>
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Visionneuse photo"><button class="close" id="lbClose" type="button">fermer [échap]</button><button class="nav-b prev" id="lbPrev" type="button" aria-label="Photo précédente">‹</button><figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption><div class="count" id="lbCount"></div></figure><button class="nav-b next-b" id="lbNext" type="button" aria-label="Photo suivante">›</button></div>
+<script src="/assets/site.js?v=20261015k" defer></script>
 </body>
 </html>

@@ -2,6 +2,8 @@
 import glob, os, re, sys
 err = 0
 for f in glob.glob('**/*.html', recursive=True):
+    if f.startswith('_atelier'):
+        continue
     t = open(f, encoding='utf-8').read()
     for ch, nom in (('—', 'tiret cadratin'), ('–', 'tiret demi-cadratin')):
         if ch in t:

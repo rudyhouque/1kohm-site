@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="fr" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AlphaPen, le stylo qui numérise l'écriture · Rudy Houque</title>
+<meta name="description" content="R&amp;D électronique pour AlphaPen, un stylo à caméra qui numérise l'écriture : transfert d'images en Bluetooth Low Energy, compression JPEG sur microcontrôleur, capteurs d'image miniatures.">
+<link rel="canonical" href="https://1kohm.fr/alphapen/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="AlphaPen, le stylo qui numérise l'écriture · Rudy Houque">
+<meta property="og:description" content="R&amp;D électronique pour AlphaPen, un stylo à caméra qui numérise l'écriture : transfert d'images en Bluetooth Low Energy, compression JPEG sur microcontrôleur, capteurs d'image miniatures.">
+<meta property="og:url" content="https://1kohm.fr/alphapen/">
+<meta property="og:image" content="https://1kohm.fr/img/alphapen/stylo-apen.jpg">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/archivo-wdth.woff2" as="font" type="font/woff2" crossorigin>
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="stylesheet" href="/assets/site.css?v=20261015k">
+</head>
+<body>
+<a class="skip" href="#p-alphapen">Aller au contenu</a>
+<div class="sysbar"><div class="wrap"><div><span>SYS / 1KOHM.FR / v1.0</span><span class="sys-geo">50.63 N · 3.06 E · LILLE</span><span><i class="dot" aria-hidden="true">●</i> conseil et expertise</span></div></div></div>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="/" aria-label="1kΩhm.fr, accueil">1k<span>Ω</span>hm.fr</a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="/projets/" aria-current="true"><b>[01]</b> projets</a>
+      <a href="/salons/"><b>[02]</b> salons</a>
+      <a href="/#parcours"><b>[03]</b> parcours</a>
+      <a href="/#contact"><b>[04]</b> contact</a>
+    </nav>
+    <button class="theme" id="themeBtn" type="button">mode sombre</button>
+  </header>
+</div>
+
+<main class="view" id="p-alphapen">
+  <div class="wrap">
+    <div class="crumbs"><a href="/projets/">← Tous les projets</a><span class="id"><b>PRJ-05</b> / 06</span></div>
+
+    <div class="p-hero">
+      <div>
+        <div class="eyebrow"><b>PRJ-05</b> · Objet connecté · AlphaPen · 2024 à 2025</div>
+        <h1>AlphaPen, le stylo qui lit ce qu'il écrit</h1>
+        <p>Une caméra dans un stylo, trois images par seconde envoyées au téléphone, sans Wi-Fi et sans vider la batterie.</p>
+      </div>
+      <figure class="pic zoom"><img fetchpriority="high" src="/img/alphapen/maquette-complete.jpg" alt="Maquette complète sur la table du laboratoire : carte radio, carte de capture d'image et caméra miniature au bout de sa nappe, reliées par des fils de prototypage"></figure>
+    </div>
+
+    <div class="pitchbox">
+      <figure class="pb-vis pic zoom"><img src="/img/alphapen/stylo-apen.jpg" alt="Deux stylos AlphaPen noirs à liserés bleus, croisés"></figure>
+      <div class="pb-txt"><span class="pb-eye">Le produit</span><h2>Vos notes manuscrites, déjà sur votre téléphone</h2><p>On écrit comme d'habitude, sur un carnet, une feuille volante, une carte. Une minuscule caméra logée près de la pointe photographie le trait plusieurs fois par seconde et l'envoie au téléphone. Une intelligence artificielle reconstitue le texte, le met en forme et le range au bon endroit. Aucun papier spécial, aucune tablette : le plaisir d'écrire, et un fichier modifiable à la fin.</p></div>
+      <ul class="pb-ben"><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l4-1L19 8l-3-3L5 16z"/><path d="M14 7l3 3"/></svg></span><div><b>Tous les papiers</b><span>Carnet, feuille, carte : aucun support spécial</span></div></li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M10 8h4M10 12h4M10 16h2"/></svg></span><div><b>Du texte modifiable</b><span>L'écriture devient un fichier, sans ressaisie</span></div></li><li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h3l2-5 4 10 2-5h3"/></svg></span><div><b>Sans fil, sans Wi-Fi</b><span>Bluetooth basse consommation vers le téléphone</span></div></li></ul>
+    </div>
+    <div class="kf">
+      <div><small>CADENCE</small><b>3 img/s</b><span>à transmettre pour que l'IA lise l'écriture</span></div>
+      <div><small>COMPRESSION</small><b>154 → 11 Ko</b><span>par image, sur le microcontrôleur du stylo</span></div>
+      <div><small>CALCUL</small><b>160 ms</b><span>pour compresser une image</span></div>
+      <div><small>TÉLÉPHONES</small><b>6</b><span>modèles testés, iOS et Android</span></div>
+      <div><small>CARTE</small><b>11 mm</b><span>de largeur maximale, pour entrer dans le stylo</span></div>
+    </div>
+
+    <!-- L1 -->
+    <div class="lay">
+      <div class="lay-head"><code>L1</code><h2>Le projet</h2><span>pour tout le monde</span></div>
+      <dl class="story">
+        <div><dt>Besoin</dt><dd>AlphaPen, une jeune entreprise, a mis au point un stylo qui numérise l'écriture grâce à une caméra et à l'intelligence artificielle. Son prototype reposait sur une caméra d'endoscope du commerce, reliée en Wi-Fi : la batterie ne tenait pas. Il fallait une carte électronique sur mesure, en Bluetooth basse consommation, capable d'envoyer trois images par seconde et de tenir six heures dans un tube de 11 mm.</dd></div>
+        <div><dt>Réponse</dt><dd>J'ai découpé le problème en verrous à lever un par un : le débit Bluetooth réel, la compression des images, le choix d'un capteur minuscule et bon marché, le flou de mouvement, puis la miniaturisation. Pour chacun, un essai mesuré, un résultat chiffré et une décision partagée avec le client.</dd></div>
+        <div><dt>Résultat</dt><dd>La chaîne complète fonctionne en maquette : un capteur d'image piloté registre par registre, une image compressée de 154 à 11 Ko en 160 ms sur le microcontrôleur, puis envoyée en Bluetooth à une application mobile. Deux cartes au format du stylo ont été dessinées. Le client a ensuite choisi une autre architecture et poursuivi seul.</dd></div>
+      </dl>
+    </div>
+
+    <div class="lay">
+      <div class="lay-head"><code>RÔLE</code><h2>Mon rôle</h2><span>responsabilités et compétences</span></div>
+      <div class="rolebox">
+        <div class="rb-intro">
+          <figure class="pic zoom rb-pic"><img loading="lazy" src="/img/alphapen/banc-mesure.jpg" alt="Banc de mesure : générateur de signaux, oscilloscope et carte d'adaptation de la caméra"></figure>
+          <p class="lead">Directeur technique chez BLUEGRioT. J'ai reçu les deux fondateurs, rédigé la proposition technique et son découpage en phases, puis piloté l'étude avec une cheffe de projet et un développeur embarqué, jusqu'aux onze revues d'avancement avec le client.</p>
+          <div class="skills"><h3 class="sk-h">Compétences techniques</h3><div class="chips-s"><span>Bluetooth Low Energy</span><span>Débit et protocole</span><span>Capteurs d'image</span><span>Compression JPEG embarquée</span><span>Basse consommation</span><span>Miniaturisation</span><span>Instruments de mesure</span></div><h3 class="sk-h">Savoir-être</h3><div class="chips-s soft"><span>Découpage en verrous</span><span>Pédagogie du matériel</span><span>Décision par la mesure</span><span>Relation avec des fondateurs</span><span>Persévérance</span></div></div>
+        </div>
+        <div class="rb-groups"><section class="rg"><h3>Avant-vente</h3><ul><li>Recueil du besoin auprès des deux fondateurs</li><li>Proposition technique en cinq phases : débit, autonomie, miniaturisation, stabilisation d'image, mode adaptatif</li><li>Cahier des charges caméra, traduit en anglais pour le sourcing en Asie</li></ul></section><section class="rg"><h3>Architecture</h3><ul><li>Choix du Bluetooth basse consommation et du microcontrôleur radio</li><li>Compression logicielle plutôt qu'un capteur qui compresse</li><li>Ajout d'un coprocesseur de capture d'image</li></ul></section><section class="rg"><h3>Tests et validation</h3><ul><li>Mesures de débit sur six téléphones, avec et sans casque Bluetooth</li><li>Essais de compression et de netteté sur banc moteur</li><li>Mise en route de capteurs non documentés</li></ul></section><section class="rg"><h3>Pilotage</h3><ul><li>Carnet d'avancement hebdomadaire partagé avec le client</li><li>Onze revues d'avancement, d'octobre 2024 à juin 2025</li><li>Chiffrage des étapes suivantes, par lots</li></ul></section><section class="rg"><h3>Interfaces</h3><ul><li>Fondateurs et équipe technique d'AlphaPen</li><li>Partenaire de sourcing des caméras</li><li>Support technique des fabricants de composants</li></ul></section></div>
+      </div>
+    </div>
+
+    <!-- RÉCIT -->
+    <div class="lay">
+      <div class="lay-head"><code>L1</code><h2>L'histoire du projet</h2><span>cinq moments clés</span></div>
+
+      <article class="chap">
+        <div class="txt">
+          <span class="n">01</span>
+          <h3>Une caméra d'endoscope dans un stylo</h3>
+          <p>Ils sont deux : l'un développe des modèles d'intelligence artificielle, l'autre le commerce. Pour leur premier prototype, ils ont acheté une petite caméra d'endoscope, de celles qui servent à regarder dans une oreille, et l'ont glissée dans un tube de stylo. Les images partent en Wi-Fi vers un serveur, qui reconnaît les lettres. Ça marche, sur n'importe quel papier.</p>
+          <p>Mais le Wi-Fi vide la batterie en peu de temps. Ils veulent passer au Bluetooth, avec une application iOS et Android. C'est leur premier produit matériel.</p>
+        </div>
+        <div class="imgs two">
+          <figure class="pic zoom wide"><img loading="lazy" src="/img/alphapen/prototype-client.jpg" alt="Le prototype du client démonté : batterie, carte, nappe de la caméra et tube du stylo"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/alphapen/coffret-client.jpg" alt="Le stylo prototype du client dans son coffret de présentation"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/alphapen/camera-nappe.jpg" alt="Une caméra miniature au bout de sa nappe souple"></figure>
+        </div>
+      </article>
+
+      <article class="chap flip">
+        <div class="txt">
+          <span class="n">02</span>
+          <h3>Ce que le Bluetooth laisse vraiment passer</h3>
+          <p>Première question : le Bluetooth basse consommation peut-il transporter trois images par seconde ? La théorie annonce 2 Mbit/s. Nous avons poussé chaque réglage de la radio, puis mesuré sur six téléphones. Sur un bon Android, 1,2 Mbit/s. Sur iPhone, quatre fois moins, à cause de limites imposées par le système. Et un casque Bluetooth qui joue de la musique fait encore perdre un tiers du débit.</p>
+          <p>Le produit doit fonctionner sur tous les téléphones : j'ai dimensionné sur le pire cas. Conclusion chiffrée, trois images de 10 Ko passent en moins d'une seconde. Il faut donc compresser.</p>
+        </div>
+        <div class="imgs two">
+          <figure class="pic zoom"><img loading="lazy" src="/img/alphapen/appli-debit.jpg" style="object-fit:contain;background:#fff" alt="L'application de test : courbe du débit Bluetooth en temps réel et image reçue"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/alphapen/logs-debit.jpg" alt="Journal de la carte : taille de chaque image envoyée et débit mesuré"></figure>
+        </div>
+      </article>
+
+      <article class="chap">
+        <div class="txt">
+          <span class="n">03</span>
+          <h3>Compresser sur un microcontrôleur</h3>
+          <p>Les capteurs qui compressent eux-mêmes en JPEG sont rares, gros ou introuvables en petite quantité. Un composant spécialisé repéré sur le papier n'existait qu'en bibliothèque pour concevoir ses propres puces. J'ai donc proposé de compresser nous-mêmes, en logiciel.</p>
+          <p>Premiers essais : des images aux couleurs psychédéliques, un ordre d'octets inversé. Une fois corrigé, le résultat a dépassé nos attentes. Sur le microcontrôleur retenu pour le stylo, une image de 154 Ko devient un JPEG de 11 Ko en 160 ms. Ce choix ouvrait la porte à des capteurs beaucoup plus simples et moins chers.</p>
+        </div>
+        <div class="imgs two">
+          <figure class="pic zoom wide"><img loading="lazy" src="/img/alphapen/compression-jpeg.jpg" style="object-fit:contain;background:#fff" alt="Compression mesurée : 150 Ko en 7 Ko en 69 ms, 600 Ko en 17,8 Ko en 270 ms"></figure>
+          <figure class="pic zoom wide"><img loading="lazy" src="/img/alphapen/tailles-images.jpg" style="object-fit:contain;background:#fff" alt="Comparaison du poids d'une image selon le format, la résolution et la compression"></figure>
+        </div>
+      </article>
+
+      <article class="chap flip">
+        <div class="txt">
+          <span class="n">04</span>
+          <h3>Des caméras sans mode d'emploi</h3>
+          <p>Le client visait quelques euros par module caméra. Ce prix écartait d'emblée les fabricants européens et américains, et les capteurs de qualité médicale aux bonnes dimensions étaient hors budget. Les modules sont donc venus d'Asie, avec des nappes au brochage inconnu et des documentations incomplètes.</p>
+          <p>Il a fallu dessiner une carte d'adaptation, retrouver l'horloge que la caméra attendait pour simplement répondre, découvrir qu'elle démarrait en veille, puis écrire ses registres un à un. Pour le flou, nous avons collé du texte sur un petit moteur en rotation : deux séries de registres portaient le même nom, une seule réglait vraiment le temps de pose.</p>
+        </div>
+        <div class="mosaic">
+          <figure class="pic zoom big"><img loading="lazy" src="/img/alphapen/maquette-camera.jpg" alt="Caméra miniature reliée à la carte de développement par la carte d'adaptation"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/alphapen/adaptateur-camera.jpg" alt="La carte d'adaptation dessinée pour brancher la nappe de la caméra"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/alphapen/nappe-soudee.jpg" alt="Nappe de caméra soudée sur une carte d'essai"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/alphapen/cablage.jpg" alt="Câblage de la caméra sur plaque d'essai"></figure>
+          <figure class="pic zoom wide"><img loading="lazy" src="/img/alphapen/analyseur-logique.jpg" alt="Analyseur logique : horloge, synchronisation et données de la caméra pendant une image"></figure>
+        </div>
+      </article>
+
+      <article class="chap">
+        <div class="txt">
+          <span class="n">05</span>
+          <h3>Une architecture, puis un autre chemin</h3>
+          <p>La chaîne complète a fini par tourner : capture, compression, envoi, affichage dans l'application, en couleurs justes. Restait la cadence. Lire une image prenait à lui seul 680 ms. J'ai proposé d'ajouter un petit coprocesseur dédié à la capture, qui reçoit l'image sans mobiliser le processeur pendant que la radio envoie la précédente. La maquette a permis de récupérer les images par ce chemin, et deux cartes au format du stylo ont été dessinées.</p>
+          <p>À ce moment, AlphaPen a changé de stratégie : ne plus concevoir son propre matériel et miser sur son logiciel et sur l'intelligence artificielle embarquée dans les composants. Nous nous sommes arrêtés là, avec un client nettement plus avancé qu'au départ.</p>
+        </div>
+        <div class="imgs two">
+          <figure class="pic zoom wide"><img loading="lazy" src="/img/alphapen/carte-stylo.jpg" style="object-fit:contain;background:#000" alt="Carte d'aspect au format allongé du stylo, composants sur une seule face"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/alphapen/carte-stylo-court.jpg" style="object-fit:contain;background:#fff" alt="Carte d'aspect au format court, face supérieure"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/alphapen/carte-stylo-court-dos.jpg" style="object-fit:contain;background:#fff" alt="Carte d'aspect au format court, face inférieure"></figure>
+        </div>
+      </article>
+    </div>
+
+    <!-- L2 -->
+    <div class="lay">
+      <div class="lay-head"><code>L2</code><h2>Conception</h2><span>pour l'équipe technique</span></div>
+      <div class="board-title" style="padding-top:0">Architecture matérielle</div>
+      <div class="hwgrid"><div class="hw"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg></span><div><b>Radio et compression</b><p>Microcontrôleur Bluetooth basse consommation double cœur, compression JPEG logicielle</p></div></div><div class="hw"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="12" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 7l1.5-3h5L16 7"/></svg></span><div><b>Capteur d'image</b><p>Module caméra miniature sur nappe souple, sortie parallèle, configuration par I2C</p></div></div><div class="hw"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg></span><div><b>Capture</b><p>Coprocesseur avec interface caméra et transfert direct en mémoire</p></div></div><div class="hw"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="17" height="10" rx="2"/><path d="M22 11v2M6 10v4M9.5 10v4"/></svg></span><div><b>Énergie</b><p>Batterie de 350 mAh au plus, objectif de six heures d'écriture</p></div></div><div class="hw"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="9" width="18" height="6" rx="3"/></svg></span><div><b>Format</b><p>Carte de 11 × 80 mm au plus, en version allongée ou courte double face</p></div></div><div class="hw"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/></svg></span><div><b>Application</b><p>Applications natives iOS et Android qui reçoivent les images et mesurent le débit</p></div></div></div>
+
+      <div class="hard" style="margin-top:44px">
+        <article>
+          <span class="n">Point délicat 1</span>
+          <h3>Le débit réel du Bluetooth</h3>
+          <p>Le débit annoncé n'est jamais celui qu'on obtient : en-têtes de protocole, intervalle de connexion, taille des paquets, et surtout le téléphone, qui décide d'une partie des réglages. Après optimisation de chaque paramètre côté stylo, l'écart entre plateformes restait d'un facteur quatre.</p>
+          <p>Plutôt que de viser la moyenne, j'ai dimensionné sur le téléphone le plus lent. C'est ce chiffre qui a fixé la taille maximale d'une image, et donc le besoin de compression.</p>
+          <table class="cmp">
+            <tr><th></th><th>Débit mesuré</th></tr>
+            <tr><th>Android, meilleur cas</th><td class="ok">1,2 Mbit/s</td></tr>
+            <tr><th>Android et casque audio</th><td>0,6 Mbit/s</td></tr>
+            <tr><th>iPhone</th><td>0,3 Mbit/s</td></tr>
+          </table>
+        </article>
+        <article>
+          <span class="n">Point délicat 2</span>
+          <h3>Trois images par seconde</h3>
+          <p>Le microcontrôleur radio lisait la caméra octet par octet : au-delà d'une certaine fréquence d'horloge, il perdait des données. La compression et l'envoi étaient rapides, la lecture beaucoup trop lente.</p>
+          <p>La solution : confier la capture à un coprocesseur doté d'une interface caméra, qui remplit sa mémoire sans calcul pendant que la radio envoie l'image précédente. Les trois étapes travaillent alors en parallèle au lieu de s'additionner.</p>
+          <table class="cmp">
+            <tr><th>Étape</th><th>Temps mesuré</th></tr>
+            <tr><th>Lecture de l'image</th><td>680 ms</td></tr>
+            <tr><th>Compression JPEG</th><td class="ok">90 ms</td></tr>
+            <tr><th>Envoi Bluetooth</th><td class="ok">50 ms</td></tr>
+          </table>
+        </article>
+      </div>
+
+      <div class="recharge">
+        <div class="imgs">
+          <figure class="pic zoom"><img loading="lazy" src="/img/alphapen/banc-mesure.jpg" alt="Banc de mesure du laboratoire pendant la mise en route de la caméra"></figure>
+          <figure class="pic zoom"><img loading="lazy" src="/img/alphapen/maquette-complete.jpg" alt="La maquette complète : radio, capture et caméra"></figure>
+        </div>
+        <div class="txt">
+          <h3>Un premier produit matériel</h3>
+          <p>Pour une équipe qui vient du logiciel, le matériel réserve des surprises : un composant à quelques euros qui n'existe qu'avec une documentation partielle, une nappe dont personne ne connaît le brochage, un téléphone qui ne respecte pas les réglages demandés. Chaque revue d'avancement servait aussi à expliquer ces contraintes avec des mesures.</p>
+          <p class="recul"><b>Avec le recul</b>Le budget visé pour la caméra a conditionné tout le reste : il excluait les fournisseurs bien documentés et nous a coûté des semaines de rétro-ingénierie. Le client s'est d'ailleurs dit prêt, plus tard, à mettre davantage dans ce composant. Aujourd'hui, je chiffre dès le départ ce qu'un composant bon marché coûtera en temps de développement, pour que le choix se fasse en connaissance de cause.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- LIENS -->
+    <div class="lay">
+      <div class="lay-head"><code>REF</code><h2>Liens</h2><span>sources externes</span></div>
+      <div class="press">
+        <a href="https://alphapen.fr" target="_blank" rel="noopener"><span class="lg mono">AP</span><span class="pt"><span class="src">AlphaPen</span><b>Le stylo qui numérise tous vos écrits</b><span>Site du produit</span></span></a>
+      </div>
+    </div>
+
+    <div class="next"><span>Projet suivant</span><a href="/horloge-du-vent/">L'Horloge du vent →</a></div>
+  </div>
+</main>
+<footer class="foot"><div class="wrap"><div><span>EOF · 1kohm.fr · Rudy Houque</span><span>1 kΩ : la résistance de base de tout montage</span><a href="/mentions-legales/">mentions légales</a></div></div></footer>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Visionneuse photo"><button class="close" id="lbClose" type="button">fermer [échap]</button><button class="nav-b prev" id="lbPrev" type="button" aria-label="Photo précédente">‹</button><figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption><div class="count" id="lbCount"></div></figure><button class="nav-b next-b" id="lbNext" type="button" aria-label="Photo suivante">›</button></div>
+<script src="/assets/site.js?v=20261015k" defer></script>
+</body>
+</html>
