@@ -4,6 +4,8 @@ Site portfolio de Rudy Houque, directeur technique spécialisé en objets connec
 
 Cadrage complet (cible, chiffres, reconnaissances, sources) : `_atelier/PRODUCT.md`.
 
+Suivi des demandes de Rudy : `_atelier/DEMANDES.md`. Le relire au début de chaque session et avant chaque compte rendu ; y noter toute nouvelle demande dès qu'elle arrive, et ne la marquer « faite » qu'après vérification sur le site.
+
 Vue d'ensemble des pages, des ressources, des savoir-faire et des liens internes à poser : `_atelier/CARTE-DU-SITE.md`. La lire avant de rédiger une page, la mettre à jour après. Les questions d'entretien et leurs réponses sont rangées dans `_atelier/entretiens/`.
 
 L'ancien site BLUEGRioT (fermé) est archivé sur la Wayback Machine : environ 250 pages, dont une page par projet et les articles du blog. Liste des adresses : `https://web.archive.org/cdx/search/cdx?url=bluegriot.fr/*&fl=timestamp,original&collapse=urlkey&filter=statuscode:200`. C'est de la matière à adapter, jamais à recopier.

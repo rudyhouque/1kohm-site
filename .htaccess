@@ -6,10 +6,11 @@ RedirectMatch 404 /\.(git|github|impeccable)(/|$)
 <FilesMatch "\.(md|py|gitignore)$">
   Require all denied
 </FilesMatch>
-RewriteCond %{HTTPS} off
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# www d'abord : un seul saut vers https://1kohm.fr
 RewriteCond %{HTTP_HOST} ^www\.1kohm\.fr$ [NC]
 RewriteRule ^ https://1kohm.fr%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 <IfModule mod_expires.c>
   ExpiresActive On
   ExpiresByType image/jpeg "access plus 1 month"

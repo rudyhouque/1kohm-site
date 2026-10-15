@@ -1,9 +1,9 @@
 const CAT=[
   {id:"horloge",logo:"/img/logos/horloge-du-vent.svg",logoAlt:"L\'Horloge du vent",code:"PRJ-06",title:"L'Horloge du vent",cadre:"Projet personnel",year:2026,dom:"Objet connecté",tech:["ESP32","Moteurs pas à pas","Capteur optique","Développement assisté par IA"],img:"/img/horloge/horloge-bleu-marine.jpg",txt:"Une horloge murale qui affiche le vent de vos spots sur trois jours. Électronique repensée pour la série, testée avec des agents d'IA."},
-  {id:"alphapen",code:"PRJ-05",title:"AlphaPen, le stylo qui lit ce qu'il écrit",cadre:"BLUEGRioT",year:2025,dom:"Objet connecté",tech:["BLE","Capteur d'image","Compression embarquée","Basse consommation"],img:"/img/alphapen/stylo-apen-carre.jpg",txt:"Une caméra dans un stylo : trois images par seconde en Bluetooth basse consommation, compressées sur le microcontrôleur."},
+  {id:"alphapen",logo:"/img/logos/alphapen.png",logoAlt:"AlphaPen",code:"PRJ-05",title:"AlphaPen, le stylo qui lit ce qu'il écrit",cadre:"BLUEGRioT",year:2025,dom:"Objet connecté",tech:["BLE","Capteur d'image","Compression embarquée","Basse consommation"],img:"/img/alphapen/stylo-apen-carre.jpg",txt:"Une caméra dans un stylo : trois images par seconde en Bluetooth basse consommation, compressées sur le microcontrôleur."},
   {id:"enchanted",logo:"/img/logos/enchanted-tools.png",logoAlt:"Enchanted Tools",code:"PRJ-04",title:"Les runes de Mirokaï",cadre:"BLUEGRioT",year:2022,dom:"Robotique",tech:["Bluetooth AoA","Localisation intérieure","RFID UHF","Basse consommation"],img:"/img/enchanted/film-runes.jpg",txt:"Des galets connectés qui guident le robot d'Enchanted Tools jusqu'à l'objet à saisir, à 5° près, même derrière un mur."},
-  {id:"cintre",code:"PRJ-01",title:"Le cintre connecté",cadre:"BLUEGRioT",year:2019,dom:"Retail",tech:["Thread","RFID / NFC","Basse consommation"],img:"/img/cintre/portants.jpg",txt:"Plus de 3 000 cintres connectés pour les Galeries Lafayette Champs-Élysées, conçus et livrés en 15 mois."},
-  {id:"choose",code:"PRJ-02",title:"#Choose, la chaussure caméléon",cadre:"Phoceis",year:2016,dom:"Mode connectée",tech:["BLE","Textile lumineux","Recharge par induction"],img:"/img/choose/produit.jpg",txt:"Une chaussure qui change de couleur depuis le smartphone. Du prototype au CES 2016, puis 150 paires fabriquées en France par Éram."},
+  {id:"cintre",logo:"/img/logos/galeries-lafayette.png",logoAlt:"Galeries Lafayette Champs-Élysées",code:"PRJ-01",title:"Le cintre connecté",cadre:"BLUEGRioT",year:2019,dom:"Retail",tech:["Thread","RFID / NFC","Basse consommation"],img:"/img/cintre/portants.jpg",txt:"Plus de 3 000 cintres connectés pour les Galeries Lafayette Champs-Élysées, conçus et livrés en 15 mois."},
+  {id:"choose",logo:"/img/logos/eram.png",logoAlt:"Éram",code:"PRJ-02",title:"#Choose, la chaussure caméléon",cadre:"Phoceis",year:2016,dom:"Mode connectée",tech:["BLE","Textile lumineux","Recharge par induction"],img:"/img/choose/produit.jpg",txt:"Une chaussure qui change de couleur depuis le smartphone. Du prototype au CES 2016, puis 150 paires fabriquées en France par Éram."},
   {id:"locacup",logo:"/img/logos/locacup.png",logoAlt:"Locacup",code:"PRJ-03",title:"Locacup",cadre:"Phoceis",year:2014,dom:"Application mobile",tech:["Application mobile","iOS","Android","Apple Watch"],img:"/img/locacup/locacup-3.jpg",txt:"Une application gratuite de pronostics de football entre amis et collègues. 100 000 comptes actifs, vue au 19/20 de France 3."}
 ];
 // projets à détailler plus tard : petite vignette, pas de page
@@ -54,7 +54,7 @@ function drawList(){
   document.getElementById('pempty').hidden=list.length+lt.length>0;
 }
 document.addEventListener('click',e=>{const c=e.target.closest('.chip-f');if(!c)return;fState[c.dataset.k]=c.dataset.v;drawList();const b=document.querySelector('.chip-f[data-k="'+c.dataset.k+'"][data-v="'+c.dataset.v+'"]');if(b)b.focus()});
-const ac=document.getElementById('allCount');if(ac)ac.textContent=CAT.length;
+const ac=document.getElementById('allCount');if(ac)ac.textContent=CAT.length+LATER.length;
 if(document.getElementById('plist'))drawList();
 
 // visionneuse avec navigation
@@ -173,3 +173,10 @@ function explode(box){
     e.preventDefault();
   });
 }
+
+// salons : CES ou VivaTech, au même niveau (sans JS, les deux restent affichés)
+(()=>{const tabs=[...document.querySelectorAll('.sal-tabs [role="tab"]')];if(!tabs.length)return;
+const show=id=>{tabs.forEach(t=>{const on=t.getAttribute('aria-controls')===id;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;document.getElementById(t.getAttribute('aria-controls')).hidden=!on})};
+tabs.forEach((t,i)=>{t.addEventListener('click',()=>{show(t.getAttribute('aria-controls'));history.replaceState(null,'','#'+t.getAttribute('aria-controls'))});
+t.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){const n=tabs[(i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length];n.focus();n.click()}})});
+show(location.hash==='#vivatech'?'vivatech':'ces')})();
