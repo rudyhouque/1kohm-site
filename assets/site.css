@@ -820,3 +820,39 @@ a.prow:hover h3,a.prow:hover .ph2{color:var(--accent-text)}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
 }
+
+/* Page d'une édition de salon (VivaTech 2026) : bilingue, vidéos, délégations */
+html:not([data-lang="en"]) [data-l="en"],html[data-lang="en"] [data-l="fr"]{display:none!important}
+.lang{display:inline-flex;border:1px solid var(--line-2)}
+.lang button{font:500 12px/1 var(--f-mono);letter-spacing:.04em;padding:9px 12px;min-height:36px;background:transparent;color:var(--label);border:0;cursor:pointer;transition:color var(--t-hover) ease-out}
+.lang button:hover{color:var(--accent-text)}
+.lang button[aria-pressed="true"]{background:var(--accent);color:var(--on-accent)}
+.ed-by{display:flex;flex-wrap:wrap;gap:6px 18px;font:400 12px/1.5 var(--f-mono);color:var(--label)}
+.ed-by b{font-weight:500;color:var(--ink)}
+.ed-role{font:500 13px/1.4 var(--f-mono);letter-spacing:.04em;text-transform:uppercase;color:var(--accent-text)}
+.ed-art{display:flex;flex-direction:column;gap:14px;max-width:42em}
+.ed-art p{font-size:18px;line-height:1.65;color:var(--ink-2)}
+.ed-vids{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--col-gap)}
+.ed-vids .aw-pic{aspect-ratio:9/16}
+.ed-vids.amb{grid-template-columns:repeat(2,minmax(0,1fr))}
+.ed-vids.amb .aw-pic{aspect-ratio:16/9}
+.ed-soon{display:flex;flex-direction:column;border:1px dashed var(--line-2);color:var(--label)}
+.ed-soon .aw-pic{display:grid;place-items:center;font:400 12px/1.4 var(--f-mono);border-bottom:1px dashed var(--line-2)}
+.ed-live{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) minmax(0,1fr);gap:var(--col-gap);align-items:start}
+.ed-live .txt{display:flex;flex-direction:column;gap:14px}
+.ed-live .txt p{color:var(--ink-2)}
+.ed-loop{margin:0;display:flex;flex-direction:column;gap:8px}
+.ed-loop video{display:block;width:100%;height:auto;border:1px solid var(--line);background:var(--ph)}
+.ed-loop figcaption,.ed-cap{font:400 12px/1.5 var(--f-mono);color:var(--label)}
+.ed-deleg{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:var(--col-gap);align-items:start}
+.ed-deleg .txt{display:flex;flex-direction:column;gap:14px}
+.ed-deleg .txt p{color:var(--ink-2)}
+.ed-flags{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.ed-flags .pic{aspect-ratio:3/2}
+.ed-flags .pic span{position:absolute;left:6px;bottom:6px;font:500 10.5px/1 var(--f-mono);letter-spacing:.05em;text-transform:uppercase;padding:4px 6px;background:var(--bg);color:var(--ink);pointer-events:none}
+.ed-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+@media (max-width:900px){.ed-vids{grid-template-columns:1fr 1fr;gap:10px}.ed-live,.ed-deleg{grid-template-columns:1fr 1fr}.ed-live .txt,.ed-deleg .txt{grid-column:1/-1}.ed-deleg .ed-flags{grid-column:1/-1}}
+@media (max-width:640px){.ed-flags{grid-template-columns:1fr 1fr}.ed-vids.amb{grid-template-columns:1fr}.ed-art p{font-size:17px}}
+.ed-vids .aw-t p span,.ed-vids .aw-t time span,.ed-vids .aw-t b span{font:inherit;color:inherit;line-height:inherit}
+.ed-vids .aw-t > span{display:block}
+.lay-head span b{font-weight:400}
