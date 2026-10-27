@@ -515,6 +515,7 @@ section.block{padding-top:clamp(64px,8vw,96px)}
 .roles .n{font:500 11px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--label)}
 .roles b{font:600 18px/1.25 var(--f-display);font-stretch:96%}
 .roles p{font-size:14px;color:var(--ink-2)}
+.roles:where(.r3){grid-template-columns:repeat(3,minmax(0,1fr))}
 .roles .hdf{flex-direction:row;gap:12px;align-items:flex-start}
 .roles .hdf .pic{width:64px;flex:none;aspect-ratio:1}
 .roles .hdf > div{display:flex;flex-direction:column;gap:6px;min-width:0}
