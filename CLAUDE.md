@@ -111,7 +111,7 @@ Logos et icônes : avant de dessiner l'icône d'un projet ou d'un salon, cherche
 
 - LinkedIn : https://www.linkedin.com/in/rudyhouque/
 - E-mail : hello@1kohm.fr, affiché par JavaScript (liens `a.mail` avec `data-u` et `data-d`) pour limiter le spam. Ne jamais l'écrire en clair dans le HTML.
-- Aucun cookie, aucune mesure d'audience. Si Rudy en veut une un jour, prévoir le consentement et mettre à jour les mentions légales.
+- Mesure d'audience : Umami (cloud.umami.is), sans cookie ni donnée personnelle, script dans le `<head>` de chaque page (à recopier dans toute nouvelle page). Mentionné dans les mentions légales. Aucun autre cookie.
 
 ## Vérifier avant de pousser
 
