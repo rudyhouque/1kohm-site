@@ -44,6 +44,7 @@ choose/index.html          projet #Choose (Éram)
 locacup/index.html         projet Locacup
 salons/index.html          CES, CES Asia, VivaTech
 projets/index.html         liste filtrable (alimentée par CAT dans assets/site.js)
+cas-usage/index.html       cas d'usage filtrables par technologie et secteur (données dans assets/cas-usage.js)
 mentions-legales/index.html
 404.html
 assets/site.css            tous les styles (thème clair, thème sombre, couche « projet » via body.deep)
@@ -66,6 +67,7 @@ Les entrées de Rudy sont dans `~/PortfolioWeb/Ressources/`. Il les complète r�
 - `Ressources/Accueil/` : notes, portraits, logos clients, reconnaissances (visuels HDF100, BFM, Stratégies, Thread Group), photos d'illustration.
 - `Ressources/Parcours/` : notes et photos du parcours professionnel.
 - `Ressources/Projets/<projet>/` : `Photos/`, `Videos/`, `Projet/`, `Sources/` (dont `ne-pas-publier.md`), parfois `Logo/`.
+- `Ressources/Cas d'usage/CAS-xx <sujet>/` : `Photos/`, `Videos/`, `Liens/`, un dossier par fiche de la page /cas-usage/ (données dans `assets/cas-usage.js`). Rudy les remplit au fur et à mesure. Photos compressées dans `img/cas-usage/`, puis champs `img` et `alt` de la fiche. Vérifier qu'aucune photo ne montre un nom ou un logo de client : les cas d'usage sont anonymes.
 - `Ressources/Salons/` : `CES/<année>/`, `VivaTech/<année>/`, `Aperçu/`, `Questions-salons.md`, logo CES dans `CES/général/logo/`. La page salons se construit comme des projets, année par année.
 
 Logos et icônes : avant de dessiner l'icône d'un projet ou d'un salon, chercher un logo dans `Ressources/` (ex. `Projets/Locacup/Logo/`, `Salons/CES/général/logo/`) et le reproduire le plus fidèlement possible, en filaire, animé et sobre. S'il n'existe pas, en créer un dans la même direction artistique.
