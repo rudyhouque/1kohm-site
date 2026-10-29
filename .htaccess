@@ -6,6 +6,8 @@ RedirectMatch 404 /\.(git|github|impeccable)(/|$)
 <FilesMatch "\.(md|py|gitignore)$">
   Require all denied
 </FilesMatch>
+# ancienne adresse de la page Technologies (29/10/2026), la sélection ?tech= est conservée
+RedirectMatch 301 ^/cas-usage(/.*)?$ https://1kohm.fr/technologies/
 # www d'abord : un seul saut vers https://1kohm.fr
 RewriteCond %{HTTP_HOST} ^www\.1kohm\.fr$ [NC]
 RewriteRule ^ https://1kohm.fr%{REQUEST_URI} [L,R=301]

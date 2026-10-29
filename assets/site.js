@@ -180,3 +180,36 @@ const show=id=>{tabs.forEach(t=>{const on=t.getAttribute('aria-controls')===id;t
 tabs.forEach((t,i)=>{t.addEventListener('click',()=>{show(t.getAttribute('aria-controls'));history.replaceState(null,'','#'+t.getAttribute('aria-controls'))});
 t.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){const n=tabs[(i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length];n.focus();n.click()}})});
 show(location.hash==='#vivatech'?'vivatech':'ces')})();
+
+// filtres repliés : quelques lignes de cases, puis « + N autres » (Projets, Technologies)
+(()=>{
+  const boxes=[...document.querySelectorAll('.filters .chips')];if(!boxes.length)return;
+  const open=new Set();
+  function update(el){
+    let b=el.nextElementSibling;
+    if(!b||!b.classList.contains('chips-more')){
+      b=document.createElement('button');b.type='button';b.className='chips-more';b.setAttribute('aria-controls',el.id);
+      b.addEventListener('click',()=>{open.has(el)?open.delete(el):open.add(el);update(el);if(!open.has(el))el.scrollIntoView({block:'nearest'})});
+      el.after(b);
+    }
+    const chips=[...el.children];
+    const top=c=>c.getBoundingClientRect().top-el.getBoundingClientRect().top;
+    el.classList.remove('clamp');chips.forEach(c=>c.classList.remove('off'));
+    const all=el.clientHeight;el.classList.add('clamp');const lim=el.clientHeight;
+    const over=all>lim+2;
+    // une case cochée cachée : on déplie plutôt que de la masquer
+    if(over&&!open.has(el)&&chips.some(c=>c.classList.contains('on')&&top(c)>=lim))open.add(el);
+    const isOpen=open.has(el);
+    el.classList.toggle('clamp',over&&!isOpen);
+    const hid=over&&!isOpen?chips.filter(c=>top(c)>=lim):[];
+    hid.forEach(c=>c.classList.add('off'));
+    b.hidden=!over;
+    b.setAttribute('aria-expanded',String(isOpen));
+    b.textContent=isOpen?'− réduire':'+ '+hid.length+(hid.length>1?' autres':' autre');
+  }
+  boxes.forEach(el=>{
+    update(el);
+    new MutationObserver(()=>update(el)).observe(el,{childList:true});
+  });
+  let t=0;addEventListener('resize',()=>{clearTimeout(t);t=setTimeout(()=>boxes.forEach(update),150)});
+})();

@@ -44,7 +44,7 @@ choose/index.html          projet #Choose (Éram)
 locacup/index.html         projet Locacup
 salons/index.html          CES, CES Asia, VivaTech
 projets/index.html         liste filtrable (alimentée par CAT dans assets/site.js)
-cas-usage/index.html       cas d'usage filtrables par technologie et secteur (données dans assets/cas-usage.js)
+technologies/index.html    rubrique Technologies : cas d'usage filtrables par technologie et secteur (données dans assets/cas-usage.js)
 mentions-legales/index.html
 404.html
 assets/site.css            tous les styles (thème clair, thème sombre, couche « projet » via body.deep)
@@ -54,6 +54,7 @@ img/<projet>/              images déjà compressées
 sitemap.xml, robots.txt, .htaccess, favicon.svg
 ```
 
+- Deux rubriques à ne pas confondre : **Projets** raconte des projets complets, avec le rôle de Rudy au centre ; **Technologies** rassemble des cas d'usage courts, en vrac, classés par technologie (la fonction d'un capteur ou d'une mesure, le besoin, l'approche proposée). Un cas peut renvoyer à un projet détaillé (par exemple Thread vers le cintre connecté).
 - Les pages projet utilisent `<body class="deep">` (fond sombre, couche ingénierie).
 - L'en-tête et le pied de page sont recopiés dans chaque page : une modification de menu se fait dans toutes les pages.
 - Ajouter un projet : créer `nom-du-projet/index.html` en copiant une page projet existante, l'ajouter dans `CAT` et `URL` de `assets/site.js`, dans `sitemap.xml`, et éventuellement sur l'accueil.

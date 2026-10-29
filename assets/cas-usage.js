@@ -137,3 +137,12 @@ const ILL={
   });
   draw();
 })();
+
+// accueil : les technologies qui comptent le plus de cas, chacune ouvre la page déjà filtrée
+(()=>{
+  const ul=document.getElementById('techHome');if(!ul)return;
+  const n={};CASES.forEach(c=>c.tech.forEach(t=>n[t]=(n[t]||0)+1));
+  const top=Object.keys(n).sort((a,b)=>n[b]-n[a]||a.localeCompare(b,'fr')).slice(0,6);
+  ul.innerHTML=top.map((t,i)=>'<li><a class="th'+(i===0?' th-1':'')+'" href="/technologies/?tech='+encodeURIComponent(t)+'"><span class="th-n">'+String(i+1).padStart(2,'0')+'</span><span class="th-t">'+t+'</span><span class="th-c">'+n[t]+' cas</span><span class="th-a" aria-hidden="true">→</span></a></li>').join('');
+  const c=document.getElementById('techCount');if(c)c.textContent=CASES.length;
+})();

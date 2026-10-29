@@ -59,7 +59,7 @@ Polices déjà hébergées dans `assets/fonts/`, aucun appel à Google Fonts.
 
 - **Barre d'état** tout en haut, en mono 11px : `SYS / 1KOHM.FR / v1.0` · `50.63 N · 3.06 E · LILLE` · `● conseil et expertise` (le point en ambre). Sur téléphone, ne garder que le premier et le dernier élément.
 - **Logo** : `1kΩhm.fr` en Plex Mono 500, le Ω en ambre.
-- **Navigation** : `[01] projets  [02] salons  [03] parcours  [04] contact`.
+- **Navigation** : `[01] projets  [02] technologies  [03] salons  [04] parcours  [05] contact` (technologies ajouté le 29/10/2026).
 - **Boutons** : texte façon commande, `./voir-les-projets` (fond ambre) et `./me-contacter` (bordure `#3B5249`). Coins droits, pas d'arrondi.
 - **Photos** : elles doivent être mises en valeur. Privilégier celles des appareils SONY, puis FUJIFILM, NIKON ou CANON, et lire les commentaires Finder que Rudy laisse sur ses photos.
 - **Portrait** : légèrement désaturé (`grayscale(.85) contrast(1.1) brightness(.9)`), fines lignes de balayage par-dessus, quatre équerres ambre aux coins, légende mono `Rudy Houque · directeur technique · Lille` (« IMG_001 · opérateur » retiré le 15/10/2026 à la demande de Rudy).

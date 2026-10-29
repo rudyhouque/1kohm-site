@@ -19,7 +19,7 @@
 <link rel="preload" href="/assets/fonts/archivo-wdth.woff2" as="font" type="font/woff2" crossorigin>
 <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}
 (function(){var r=document.documentElement,l;try{l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('lang')}catch(e){}if(l!=='fr'&&l!=='en')l=/^fr/i.test(navigator.language||'fr')?'fr':'en';r.setAttribute('data-lang',l);r.lang=l})();</script>
-<link rel="stylesheet" href="/assets/site.css?v=20261029">
+<link rel="stylesheet" href="/assets/site.css?v=20261029c">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"VivaTech 2026 : quatre jours de vidéos sur le salon","inLanguage":["fr","en"],"datePublished":"2026-10-27","author":{"@type":"Person","name":"Rudy Houque","jobTitle":"Independent Hardware & IoT Analyst","url":"https://1kohm.fr/"},"publisher":{"@type":"Organization","name":"1kohm","url":"https://1kohm.fr/"},"image":"https://1kohm.fr/img/vivatech-2026/badge-media.jpg","video":[{"@type":"VideoObject","name":"VIVATECH 2026 - JOUR 1","embedUrl":"https://www.youtube.com/shorts/W067sJvIiGc","thumbnailUrl":"https://1kohm.fr/img/vivatech-2026/jour-1.jpg","uploadDate":"2026-06-17"},{"@type":"VideoObject","name":"VIVATECH 2026 - JOUR 2","embedUrl":"https://www.youtube.com/shorts/bWBezmuQslw","thumbnailUrl":"https://1kohm.fr/img/vivatech-2026/jour-2.jpg","uploadDate":"2026-06-18"},{"@type":"VideoObject","name":"VIVATECH 2026 - JOUR 3","embedUrl":"https://www.youtube.com/shorts/p-0ZYECwZpU","thumbnailUrl":"https://1kohm.fr/img/vivatech-2026/jour-3.jpg","uploadDate":"2026-06-19"},{"@type":"VideoObject","name":"VIVATECH 2026 - JOUR 4","embedUrl":"https://www.youtube.com/shorts/ZO8-wjh4Obs","thumbnailUrl":"https://1kohm.fr/img/vivatech-2026/jour-4.jpg","uploadDate":"2026-06-20"}]}</script>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="324cd797-ee55-44f8-921b-9b1022fabcf0"></script>
 </head>
@@ -31,9 +31,10 @@
     <a class="brand" href="/" aria-label="1kΩhm.fr, accueil">1k<span>Ω</span>hm.fr</a>
     <nav class="nav" aria-label="Navigation principale">
       <a href="/projets/"><b>[01]</b> projets</a>
-      <a href="/salons/" aria-current="page"><b>[02]</b> salons</a>
-      <a href="/#parcours"><b>[03]</b> parcours</a>
-      <a href="/#contact"><b>[04]</b> contact</a>
+      <a href="/technologies/"><b>[02]</b> technologies</a>
+      <a href="/salons/" aria-current="page"><b>[03]</b> salons</a>
+      <a href="/#parcours"><b>[04]</b> parcours</a>
+      <a href="/#contact"><b>[05]</b> contact</a>
     </nav>
     <button class="theme" id="themeBtn" type="button">mode sombre</button>
   </header>
@@ -155,6 +156,6 @@
 function set(l,save){r.setAttribute('data-lang',l);r.lang=l;document.title=T[l];b.forEach(function(x){x.setAttribute('aria-pressed',x.dataset.set===l)});if(save)try{localStorage.setItem('lang',l)}catch(e){}}
 b.forEach(function(x){x.addEventListener('click',function(){set(x.dataset.set,true)})});set(r.getAttribute('data-lang')||'fr');
 if(matchMedia('(prefers-reduced-motion: reduce)').matches)document.querySelectorAll('.ed-loop video').forEach(function(v){v.removeAttribute('autoplay');v.pause();v.controls=true})})();</script>
-<script src="/assets/site.js?v=20261015o" defer></script>
+<script src="/assets/site.js?v=20261029b" defer></script>
 </body>
 </html>

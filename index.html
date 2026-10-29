@@ -15,7 +15,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/assets/fonts/archivo-wdth.woff2" as="font" type="font/woff2" crossorigin>
 <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
-<link rel="stylesheet" href="/assets/site.css?v=20261029">
+<link rel="stylesheet" href="/assets/site.css?v=20261029c">
 <script defer src="https://cloud.umami.is/script.js" data-website-id="324cd797-ee55-44f8-921b-9b1022fabcf0"></script>
 </head>
 <body>
@@ -26,9 +26,10 @@
     <a class="brand" href="/" aria-label="1kΩhm.fr, accueil">1k<span>Ω</span>hm.fr</a>
     <nav class="nav" aria-label="Navigation principale">
       <a href="/projets/"><b>[01]</b> projets</a>
-      <a href="/salons/"><b>[02]</b> salons</a>
-      <a href="/#parcours"><b>[03]</b> parcours</a>
-      <a href="/#contact"><b>[04]</b> contact</a>
+      <a href="/technologies/"><b>[02]</b> technologies</a>
+      <a href="/salons/"><b>[03]</b> salons</a>
+      <a href="/#parcours"><b>[04]</b> parcours</a>
+      <a href="/#contact"><b>[05]</b> contact</a>
     </nav>
     <button class="theme" id="themeBtn" type="button">mode sombre</button>
   </header>
@@ -115,9 +116,18 @@
         <a class="aw" href="https://youtu.be/-MbvShF2enQ" target="_blank" rel="noopener"><figure class="aw-pic"><img loading="lazy" src="/img/autres/reco-bfm.jpg" alt="Rudy Houque invité du Focus Éco de BFM Lille"><span class="aw-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></figure><div class="aw-t"><p><time>2026</time>Invité BFM Lille</p><span>Le Focus Éco de « Bonsoir le Nord » : inventer l'objet connecté de demain</span><b>Voir l'interview <i aria-hidden="true">↗</i></b></div></a>
     </section>
 
+    <section class="block" id="technologies" aria-labelledby="h-tech">
+      <div class="head">
+        <h2 id="h-tech"><b>[02]</b>Technologies</h2>
+        <p>Des cas d'usage courts, classés par technologie : à quoi sert un capteur ou une mesure, le besoin du client et l'approche que j'ai proposée. Les projets racontés en détail y renvoient aussi.</p>
+      </div>
+      <ul class="th-list" id="techHome"></ul>
+      <a class="allp" href="/technologies/"><span class="allp-t"><small>./technologies</small><span>Voir les <span id="techCount">18</span> cas d'usage</span></span><span class="allp-s">filtrer par technologie et par secteur</span><span class="allp-a" aria-hidden="true">→</span></a>
+    </section>
+
     <section class="block" id="veille" aria-labelledby="h-veille">
       <div class="head">
-        <h2 id="h-veille"><b>[02]</b>Salons &amp; veille</h2>
+        <h2 id="h-veille"><b>[03]</b>Salons &amp; veille</h2>
         <!-- JUGE-CES-2027 masqué jusqu'à la galerie des juges sur CES.tech : d'exposant à juge --><p>Dix ans de CES et de VivaTech, d'exposant à média accrédité. Une veille technologique de terrain, que je restitue ensuite aux entreprises de la région.</p>
       </div>
 
@@ -174,7 +184,7 @@
     </section>
 
     <section class="block" id="parcours" aria-labelledby="h-parcours">
-      <div class="head"><h2 id="h-parcours"><b>[03]</b>Parcours</h2><span class="hmeta">2007 → aujourd'hui</span></div>
+      <div class="head"><h2 id="h-parcours"><b>[04]</b>Parcours</h2><span class="hmeta">2007 → aujourd'hui</span></div>
       <ol class="path">
         <li class="now"><time>2026</time><span class="plg txt"><span class="brand-m">1k<span>Ω</span>hm</span></span><div><h3>Conseil et expertise</h3><p class="role">Missions en objets connectés · Lille</p><p>Direction technique, cadrage et chiffrage de projets, conception électronique, accompagnement jusqu'à la série.</p></div></li>
         <li><time>2016 à 2026</time><span class="plg"><img src="/img/logos/bluegriot.png" alt="BLUEGRioT"></span><div><h3>BLUEGRioT</h3><p class="role">Cofondateur et directeur technique</p><p>Bureau d'études en objets connectés, du design à l'industrialisation. Création de l'entreprise, recrutements, plus de 270 propositions techniques, pilotage des équipes. <a href="/cintre-connecte/">Le cintre connecté</a>, <a href="/enchanted-tools/">les runes de Mirokaï</a>, <a href="/alphapen/">AlphaPen</a>.</p></div></li>
@@ -187,7 +197,7 @@
     <section class="contact" id="contact" aria-labelledby="h-contact">
       <figure class="c-pic"><img loading="lazy" src="/img/autres/portrait-contact.jpg" alt="Rudy Houque, souriant, en chemise bleue"></figure>
       <div class="c-body">
-        <span class="kicker">[04] contact</span>
+        <span class="kicker">[05] contact</span>
         <h2 id="h-contact">Parlons de votre prochain projet.</h2>
         <p class="c-lede">Un produit à concevoir, un prototype à industrialiser, un avis technique avant de vous lancer : écrivez-moi, je réponds personnellement.</p>
         <div class="c-actions">
@@ -202,6 +212,7 @@
 <footer class="foot"><div class="wrap"><div><span>EOF · 1kohm.fr · Rudy Houque</span><span>1 kΩ : la résistance de base de tout montage</span><a href="/mentions-legales/">mentions légales</a></div></div></footer>
 
 <div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Visionneuse photo"><button class="close" id="lbClose" type="button">fermer [échap]</button><button class="nav-b prev" id="lbPrev" type="button" aria-label="Photo précédente">‹</button><figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption><div class="count" id="lbCount"></div></figure><button class="nav-b next-b" id="lbNext" type="button" aria-label="Photo suivante">›</button></div>
-<script src="/assets/site.js?v=20261015o" defer></script>
+<script src="/assets/cas-usage.js?v=20261029b" defer></script>
+<script src="/assets/site.js?v=20261029b" defer></script>
 </body>
 </html>
