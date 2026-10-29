@@ -111,7 +111,14 @@ Logos et icônes : avant de dessiner l'icône d'un projet ou d'un salon, cherche
 
 - LinkedIn : https://www.linkedin.com/in/rudyhouque/
 - E-mail : hello@1kohm.fr, affiché par JavaScript (liens `a.mail` avec `data-u` et `data-d`) pour limiter le spam. Ne jamais l'écrire en clair dans le HTML.
-- Mesure d'audience : Umami (cloud.umami.is), sans cookie ni donnée personnelle, script dans le `<head>` de chaque page (à recopier dans toute nouvelle page). Mentionné dans les mentions légales. Aucun autre cookie.
+- Mesure d'audience : Umami (cloud.umami.is), sans cookie ni donnée personnelle. Mentionné dans les mentions légales. Aucun autre cookie.
+
+## Suivi Umami (impératif)
+
+- Chaque page HTML du site doit contenir dans son `<head>`, juste avant `</head>`, le script :
+  `<script defer src="https://cloud.umami.is/script.js" data-website-id="324cd797-ee55-44f8-921b-9b1022fabcf0"></script>`
+- À chaque création de page, l'ajouter.
+- À chaque modification du site, vérifier avant le commit que toutes les pages le contiennent toujours : `git ls-files '*.html' | xargs grep -L 'cloud.umami.is'` ne doit rien afficher. Signaler à Rudy toute page où il manque.
 
 ## Vérifier avant de pousser
 
@@ -119,4 +126,5 @@ Logos et icônes : avant de dessiner l'icône d'un projet ou d'un salon, cherche
 2. Parcourir chaque page modifiée, en largeur ordinateur et téléphone.
 3. Lancer `python3 verifier.py` : il signale les tirets longs, les liens internes et les images manquants. Il doit afficher « Tout est bon. ».
 4. Vérifier qu'aucune image ni aucun lien interne n'est cassé.
-5. Commit avec un message clair en français, puis `git push`.
+5. Vérifier que toutes les pages contiennent le script Umami (voir « Suivi Umami ») et signaler à Rudy celles où il manque.
+6. Commit avec un message clair en français, puis `git push`.
