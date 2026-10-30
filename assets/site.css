@@ -927,3 +927,27 @@ html:not([data-lang="en"]) [data-l="en"],html[data-lang="en"] [data-l="fr"]{disp
 .chips-more[hidden]{display:none}
 @media (max-width:900px){.chips-more{grid-column:1}}
 @media (max-width:640px){.chips{--rows:3}}
+
+/* ===== MENU REPLIÉ (hamburger) =====
+   Sans JavaScript, le menu reste déplié (règles plus haut). */
+.menu-btn{display:none}
+.js .top{position:relative;z-index:40;grid-template-columns:1fr auto auto;grid-template-areas:none;gap:var(--s3)}
+.js .brand,.js .theme{grid-area:auto}
+.js .menu-btn{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line-2);background:transparent;padding:9px 12px;font:400 12px/1 var(--f-mono);color:var(--ink);cursor:pointer;white-space:nowrap;transition:color var(--t-hover) ease-out,border-color var(--t-hover) ease-out}
+.js .menu-btn:hover,.js .top.open .menu-btn{color:var(--accent-text);border-color:var(--accent)}
+.menu-ico{position:relative;width:14px;height:10px}
+.menu-ico i{position:absolute;left:0;width:100%;height:1px;background:currentColor;transition:transform 220ms var(--ease-out),opacity 120ms ease-out}
+.menu-ico i:nth-child(1){top:0}.menu-ico i:nth-child(2){top:4.5px}.menu-ico i:nth-child(3){bottom:0}
+.top.open .menu-ico i:nth-child(1){transform:translateY(4.5px) rotate(45deg)}
+.top.open .menu-ico i:nth-child(2){opacity:0}
+.top.open .menu-ico i:nth-child(3){transform:translateY(-4.5px) rotate(-45deg)}
+.js .nav{position:absolute;top:calc(100% - 4px);right:0;z-index:40;display:flex;flex-direction:column;width:min(320px,100%);gap:0;border:1px solid var(--line-2);background:var(--bg);box-shadow:0 14px 32px -18px rgb(0 0 0 / .35);font:400 14px/1 var(--f-mono);opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity 160ms ease-out,transform 220ms var(--ease-out),visibility 0s linear 220ms}
+.js .top.open .nav{opacity:1;visibility:visible;transform:none;transition:opacity 160ms ease-out,transform 220ms var(--ease-out),visibility 0s}
+.js .nav a{display:flex;flex-direction:row;align-items:center;gap:14px;grid-column:auto;min-height:52px;padding:0 18px;border:0;border-bottom:1px solid var(--line)}
+.js .nav a:last-child{border-bottom:0}
+.js .nav a::after{content:"→";margin-left:auto;color:var(--label);transition:transform var(--t-hover) ease-out,color var(--t-hover) ease-out}
+@media (hover:hover){.js .nav a:hover::after{color:var(--accent-text);transform:translateX(3px)}}
+.js .nav a[aria-current]{box-shadow:inset 3px 0 0 var(--accent)}
+@media (max-width:900px){.js .top{padding-block:var(--s4)}}
+@media (max-width:640px){.js .nav{width:100%}}
+@media (prefers-reduced-motion:reduce){.js .nav,.js .top.open .nav,.menu-ico i,.js .nav a::after{transition:none}.js .nav{transform:none}}

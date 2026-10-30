@@ -213,3 +213,15 @@ show(location.hash==='#vivatech'?'vivatech':'ces')})();
   });
   let t=0;addEventListener('resize',()=>{clearTimeout(t);t=setTimeout(()=>boxes.forEach(update),150)});
 })();
+
+// menu replié : ouverture au bouton, fermeture par Échap, clic à côté ou choix d'une entrée
+(function(){
+  const mb=document.getElementById('menuBtn');if(!mb)return;
+  const top=mb.closest('.top'),nav=document.getElementById('nav'),lbl=mb.querySelector('.menu-lbl');
+  function set(o){top.classList.toggle('open',o);mb.setAttribute('aria-expanded',String(o));lbl.textContent=o?'fermer':'menu'}
+  mb.addEventListener('click',()=>{const o=!top.classList.contains('open');set(o);if(o)nav.querySelector('a').focus()});
+  nav.addEventListener('click',e=>{if(e.target.closest('a'))set(false)});
+  document.addEventListener('click',e=>{if(top.classList.contains('open')&&!top.contains(e.target))set(false)});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&top.classList.contains('open')){set(false);mb.focus()}});
+  nav.addEventListener('focusout',e=>{if(top.classList.contains('open')&&!top.contains(e.relatedTarget))set(false)});
+})();

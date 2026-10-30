@@ -14,8 +14,8 @@
 <meta property="og:image" content="https://1kohm.fr/img/autres/portrait-vert.jpg">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/assets/fonts/archivo-wdth.woff2" as="font" type="font/woff2" crossorigin>
-<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
-<link rel="stylesheet" href="/assets/site.css?v=20261029c">
+<script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<link rel="stylesheet" href="/assets/site.css?v=20261030">
 <script defer src="https://cloud.umami.is/script.js" data-website-id="324cd797-ee55-44f8-921b-9b1022fabcf0"></script>
 </head>
 <body>
@@ -24,7 +24,7 @@
 <div class="wrap">
   <header class="top">
     <a class="brand" href="/" aria-label="1kΩhm.fr, accueil">1k<span>Ω</span>hm.fr</a>
-    <nav class="nav" aria-label="Navigation principale">
+    <nav class="nav" id="nav" aria-label="Navigation principale">
       <a href="/projets/"><b>[01]</b> projets</a>
       <a href="/technologies/"><b>[02]</b> technologies</a>
       <a href="/salons/"><b>[03]</b> salons</a>
@@ -32,6 +32,7 @@
       <a href="/#contact"><b>[05]</b> contact</a>
     </nav>
     <button class="theme" id="themeBtn" type="button">mode sombre</button>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav"><span class="menu-ico" aria-hidden="true"><i></i><i></i><i></i></span><span class="menu-lbl">menu</span></button>
   </header>
 </div>
 
@@ -76,6 +77,14 @@
       </div>
     </section>
 
+    <section class="awards" aria-labelledby="h-awards">
+      <h2 id="h-awards" class="aw-head">Reconnaissances</h2>
+        <a class="aw" href="https://www.lafrenchtechlille.com/hdf100" target="_blank" rel="noopener"><figure class="aw-pic"><img loading="lazy" src="/img/autres/reco-hdf100.jpg" style="object-fit:contain;background:#fff" alt="Visuel lauréat HDF100 2024 de Rudy Houque, French Tech Lille"></figure><div class="aw-t"><p><time>2024</time>Lauréat HDF100</p><span>Parmi les 100 personnalités de la tech et de l'innovation en Hauts-de-France</span><b>La French Tech Lille <i aria-hidden="true">↗</i></b></div></a>
+        <a class="aw" href="https://www.strategies.fr/creations/bluegriot-pour-galeries-lafayette-champs-elysees-cintre-connecte" target="_blank" rel="noopener"><figure class="aw-pic"><img loading="lazy" src="/img/autres/reco-strategies.jpg" style="object-position:50% 6%" alt="Plaque du Grand Prix Stratégies de l'expérience client 2019, prix Argent"></figure><div class="aw-t"><p><time>2019</time>Prix Argent Stratégies</p><span>Grand Prix de l'expérience client, pour le cintre connecté</span><b>Stratégies <i aria-hidden="true">↗</i></b></div></a>
+        <a class="aw" href="https://threadgroup.org/newsroom/case-studies/bluegriot" target="_blank" rel="noopener"><figure class="aw-pic"><img loading="lazy" src="/img/autres/reco-thread.jpg" alt="Rudy Houque présente le cintre connecté en vidéo pour le Thread Group"><span class="aw-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></figure><div class="aw-t"><p><time>2019</time>Scène Thread Group, Zoug</p><span>Sur scène après Siemens et Google, pour présenter le réseau du cintre connecté</span><b>Thread Group <i aria-hidden="true">↗</i></b></div></a>
+        <a class="aw" href="https://youtu.be/-MbvShF2enQ" target="_blank" rel="noopener"><figure class="aw-pic"><img loading="lazy" src="/img/autres/reco-bfm.jpg" alt="Rudy Houque invité du Focus Éco de BFM Lille"><span class="aw-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></figure><div class="aw-t"><p><time>2026</time>Invité BFM Lille</p><span>Le Focus Éco de « Bonsoir le Nord » : inventer l'objet connecté de demain</span><b>Voir l'interview <i aria-hidden="true">↗</i></b></div></a>
+    </section>
+
     <section class="block" id="projets" aria-labelledby="h-projets">
       <div class="head">
         <h2 id="h-projets"><b>[01]</b>Aperçu de projets</h2>
@@ -106,14 +115,6 @@
         </a>
       </div>
       <a class="allp" href="/projets/"><span class="allp-t"><small>./tous-les-projets</small><span>Voir les <span class="js-count">6</span> projets</span></span><span class="allp-s">filtrer par cadre ou technologie</span><span class="allp-a" aria-hidden="true">→</span></a>
-    </section>
-
-    <section class="awards" aria-labelledby="h-awards">
-      <h2 id="h-awards" class="aw-head">Reconnaissances</h2>
-        <a class="aw" href="https://www.lafrenchtechlille.com/hdf100" target="_blank" rel="noopener"><figure class="aw-pic"><img loading="lazy" src="/img/autres/reco-hdf100.jpg" style="object-fit:contain;background:#fff" alt="Visuel lauréat HDF100 2024 de Rudy Houque, French Tech Lille"></figure><div class="aw-t"><p><time>2024</time>Lauréat HDF100</p><span>Parmi les 100 personnalités de la tech et de l'innovation en Hauts-de-France</span><b>La French Tech Lille <i aria-hidden="true">↗</i></b></div></a>
-        <a class="aw" href="https://www.strategies.fr/creations/bluegriot-pour-galeries-lafayette-champs-elysees-cintre-connecte" target="_blank" rel="noopener"><figure class="aw-pic"><img loading="lazy" src="/img/autres/reco-strategies.jpg" style="object-position:50% 6%" alt="Plaque du Grand Prix Stratégies de l'expérience client 2019, prix Argent"></figure><div class="aw-t"><p><time>2019</time>Prix Argent Stratégies</p><span>Grand Prix de l'expérience client, pour le cintre connecté</span><b>Stratégies <i aria-hidden="true">↗</i></b></div></a>
-        <a class="aw" href="https://threadgroup.org/newsroom/case-studies/bluegriot" target="_blank" rel="noopener"><figure class="aw-pic"><img loading="lazy" src="/img/autres/reco-thread.jpg" alt="Rudy Houque présente le cintre connecté en vidéo pour le Thread Group"><span class="aw-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></figure><div class="aw-t"><p><time>2019</time>Scène Thread Group, Zoug</p><span>Sur scène après Siemens et Google, pour présenter le réseau du cintre connecté</span><b>Thread Group <i aria-hidden="true">↗</i></b></div></a>
-        <a class="aw" href="https://youtu.be/-MbvShF2enQ" target="_blank" rel="noopener"><figure class="aw-pic"><img loading="lazy" src="/img/autres/reco-bfm.jpg" alt="Rudy Houque invité du Focus Éco de BFM Lille"><span class="aw-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></figure><div class="aw-t"><p><time>2026</time>Invité BFM Lille</p><span>Le Focus Éco de « Bonsoir le Nord » : inventer l'objet connecté de demain</span><b>Voir l'interview <i aria-hidden="true">↗</i></b></div></a>
     </section>
 
     <section class="block" id="technologies" aria-labelledby="h-tech">
@@ -213,6 +214,6 @@
 
 <div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Visionneuse photo"><button class="close" id="lbClose" type="button">fermer [échap]</button><button class="nav-b prev" id="lbPrev" type="button" aria-label="Photo précédente">‹</button><figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption><div class="count" id="lbCount"></div></figure><button class="nav-b next-b" id="lbNext" type="button" aria-label="Photo suivante">›</button></div>
 <script src="/assets/cas-usage.js?v=20261029b" defer></script>
-<script src="/assets/site.js?v=20261029b" defer></script>
+<script src="/assets/site.js?v=20261030" defer></script>
 </body>
 </html>
