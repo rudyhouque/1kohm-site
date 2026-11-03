@@ -58,7 +58,7 @@ Polices déjà hébergées dans `assets/fonts/`, aucun appel à Google Fonts.
 ## Éléments de signature
 
 - **Barre d'état** tout en haut, en mono 11px : `SYS / 1KOHM.FR / v1.0` · `50.63 N · 3.06 E · LILLE` · `● conseil et expertise` (le point en ambre). Sur téléphone, ne garder que le premier et le dernier élément.
-- **Logo** : `1kΩhm.fr` en Plex Mono 500, le Ω en ambre.
+- **Logo** (depuis le 3 novembre 2026) : l'emblème 1kohm, le code CMS **102** (résistance de 1 kΩ) entre deux terminaisons, avec deux équerres de sérigraphie en haut à droite et en bas à gauche. Dans l'en-tête, SVG intégré au HTML : 102 et équerres en `currentColor` (`--ink`), terminaisons en `--accent`, il suit donc les deux thèmes. 84 px de large sur ordinateur, 64 px sur téléphone, jamais moins de 48 px ; en dessous, le favicon. Zone de protection : 2 T autour (T = largeur d'une terminaison, environ 7 % de la largeur). Le texte est vectorisé : ne jamais le recomposer en HTML. À ne pas faire : déformer ou faire pivoter, ajouter ou déplacer des équerres, colorer le 102, changer la couleur des terminaisons hors accent ou monochrome, ajouter ombre, dégradé ou lueur. Détail et versions : `CHARTE.md` du pack d'identité (hors dépôt). Fichiers du site : `favicon.svg`, `favicon.ico`, `img/marque/`.
 - **Navigation** : `[01] projets  [02] technologies  [03] salons  [04] parcours  [05] contact` (technologies ajouté le 29/10/2026).
 - **Boutons** : texte façon commande, `./voir-les-projets` (fond ambre) et `./me-contacter` (bordure `#3B5249`). Coins droits, pas d'arrondi.
 - **Photos** : elles doivent être mises en valeur. Privilégier celles des appareils SONY, puis FUJIFILM, NIKON ou CANON, et lire les commentaires Finder que Rudy laisse sur ses photos.
