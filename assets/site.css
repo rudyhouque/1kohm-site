@@ -955,3 +955,18 @@ html:not([data-lang="en"]) [data-l="en"],html[data-lang="en"] [data-l="fr"]{disp
 @media (max-width:900px){.js .top{padding-block:var(--s4)}}
 @media (max-width:640px){.js .nav{width:100%}}
 @media (prefers-reduced-motion:reduce){.js .nav,.js .top.open .nav,.menu-ico i,.js .nav a::after{transition:none}.js .nav{transform:none}}
+
+/* ===== ANIMATION D'ACCUEIL (index.html, première visite seulement : voir DESIGN.md, Mouvement) =====
+   html.intro est posé par le script en ligne du <head> : le pseudo-élément couvre la page dès le premier affichage,
+   puis assets/intro.js pose le calque et retire la classe. Secours : si le script ne vient pas, le cache s'efface seul. */
+html.intro::before,.intro-calque{
+  position:fixed;top:0;right:0;bottom:0;left:0;z-index:100;
+  background-color:var(--bg);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:32px 32px;
+}
+html.intro::before{content:"";animation:intro-secours 300ms ease-out 5s forwards}
+@keyframes intro-secours{to{opacity:0;visibility:hidden}}
+.intro-calque{height:100vh;height:100dvh;bottom:auto;display:flex;align-items:center;justify-content:center;overflow:hidden;color:var(--ink);transition:opacity 350ms ease-out;cursor:default;-webkit-user-select:none;user-select:none}
+.intro-calque svg{display:block;width:min(78vw,600px,142vh);width:min(78vw,600px,142dvh);height:auto;overflow:visible;transform-origin:50% 36%;transform:scale(6)}
+@media (prefers-reduced-motion:reduce){html.intro::before,.intro-calque{display:none}}

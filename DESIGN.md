@@ -95,6 +95,18 @@ Idées pour la suite, à ne faire qu'avec l'accord de Rudy : #Choose (semelle, c
 - Effets voulus : sobres et originaux. Survol des cartes, léger flottement, carrousel simple qui défile doucement (pause au survol, arrêt avec `prefers-reduced-motion`).
 - Pas d'effet de texte qui se tape lettre par lettre, pas de glitch, pas de parallaxe.
 
+### Exception : l'animation d'accueil (depuis le 5 novembre 2026)
+
+Seule animation autorisée à dépasser une seconde : **2,2 s**, **une seule fois par visiteur**, **sur l'accueil uniquement**.
+
+- Ce qu'elle montre : un gros plan sur des chiffres qui défilent comme des rouleaux, dans le symbole schématique d'une résistance (rectangle, deux pattes, repère R1). La caméra recule pendant que les rouleaux ralentissent et se posent sur 102. Le symbole rétrécit et devient le logo : les pattes se rétractent, les côtés gauche et droit deviennent les terminaisons ambre, le haut et le bas glissent dans les angles pour former les équerres, puis la signature « 1kohm » apparaît. L'image finale reste figée 400 ms, puis le calque disparaît en fondu (350 ms, opacité seule) et il est retiré de la page.
+- Construction : calque plein écran posé par-dessus l'accueil (`aria-hidden="true"`), la page est chargée normalement en dessous. Dessin en coordonnées SVG `0 0 320 180`, celles de l'emblème. Couleurs prises dans `--bg`, `--grid`, `--ink` et `--accent` : le calque suit le thème choisi. Logo en `min(78vw, 600px)` de large, jamais plus haut que 80 % de l'écran. Code : `assets/intro.js`, chargé seulement quand l'animation doit être jouée ; styles en fin de `site.css`.
+- Décision dès le `<head>` d'`index.html` (classe `intro` sur `<html>`, sans flash du contenu). Mémoire : clé localStorage `1kohm-intro`. Si le stockage est indisponible, l'animation n'est pas jouée, pour ne pas la répéter à chaque visite.
+- Un clic, un toucher, une touche ou la molette ferment le calque immédiatement (fondu de 150 ms).
+- `prefers-reduced-motion` : rien ne s'affiche.
+- Pas de bouton « rejouer » sur le site. Pour la revoir en test : ouvrir `/?intro`, ou effacer la clé `1kohm-intro` dans le stockage local du navigateur.
+- Référence exacte : `mix3-reference.html` du pack d'identité (hors dépôt).
+
 ## À éviter
 
 Les clichés des sites générés : dégradés violets, cartes en verre dépoli, emojis dans les titres, icônes décoratives partout, ombres portées molles, coins très arrondis, sections « héros » centrées sans grille, trois cartes identiques avec icône, titre et paragraphe.

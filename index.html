@@ -16,8 +16,10 @@
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="apple-touch-icon" href="/img/marque/apple-touch-icon-180.png">
 <link rel="preload" href="/assets/fonts/archivo-wdth.woff2" as="font" type="font/woff2" crossorigin>
-<script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
-<link rel="stylesheet" href="/assets/site.css?v=20261103">
+<script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}
+/* animation d'accueil : une seule fois par visiteur (clé « 1kohm-intro »), jamais en mouvement réduit ; ?intro pour la rejouer en test */
+(function(d,h){var go=false;if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;if(/[?&]intro(?:[=&]|$)/.test(location.search))go=true;else try{if(!localStorage.getItem('1kohm-intro')){localStorage.setItem('1kohm-intro','1');go=true}}catch(e){}if(!go)return;h.classList.add('intro');['plex-mono-500','plex-sans-400'].forEach(function(f){var l=d.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='';l.href='/assets/fonts/'+f+'.woff2';d.head.appendChild(l)});var s=d.createElement('script');s.src='/assets/intro.js?v=20261105';s.async=true;d.head.appendChild(s)})(document,document.documentElement);</script>
+<link rel="stylesheet" href="/assets/site.css?v=20261105">
 <script defer src="https://cloud.umami.is/script.js" data-website-id="324cd797-ee55-44f8-921b-9b1022fabcf0"></script>
 </head>
 <body>
