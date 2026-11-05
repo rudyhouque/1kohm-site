@@ -43,6 +43,7 @@ cintre-connecte/index.html projet Galeries Lafayette
 choose/index.html          projet #Choose (Éram)
 locacup/index.html         projet Locacup
 salons/index.html          CES, CES Asia, VivaTech
+parcours/index.html        parcours (2007 à aujourd'hui) puis savoir-faire, sortis de l'accueil le 05/11/2026
 projets/index.html         liste filtrable (alimentée par CAT dans assets/site.js)
 technologies/index.html    rubrique Technologies : cas d'usage filtrables par technologie et secteur (données dans assets/cas-usage.js)
 mentions-legales/index.html

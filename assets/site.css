@@ -333,7 +333,7 @@ section.block{padding-top:clamp(64px,8vw,96px)}
 
 /* contact */
 .contact{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--col-gap);row-gap:var(--s5);align-items:center;margin-top:clamp(64px,8vw,96px);padding-block:clamp(40px,6vw,64px);border-top:1px solid var(--line)}
-.c-pic{grid-column:1 / span 4;margin:0;aspect-ratio:4/5;overflow:hidden;border:1px solid var(--line);background:var(--ph)}
+.c-pic{grid-column:2 / span 3;margin:0;aspect-ratio:4/5;overflow:hidden;border:1px solid var(--line);background:var(--ph)}
 .c-pic img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;transition:transform 600ms var(--ease-out)}
 .c-body{grid-column:6 / -1;display:flex;flex-direction:column;gap:16px;min-width:0}
 .contact h2{font-size:clamp(32px,4.4vw,52px);letter-spacing:-.02em;line-height:1.05}
@@ -759,7 +759,7 @@ a.prow:hover h3,a.prow:hover .ph2{color:var(--accent-text)}
   .kf > div:last-child{border-bottom:0!important;grid-column:1/-1;border-right:0!important}
   .cards{grid-template-columns:1fr 1fr}
   .awards{grid-template-columns:1fr 1fr;row-gap:var(--s5)}
-  .c-pic{grid-column:1 / span 5}.c-body{grid-column:6 / -1}
+  .c-pic{grid-column:1 / span 4}.c-body{grid-column:6 / -1}
   .path > li{grid-template-columns:110px 1fr;row-gap:12px}.path > li > div{grid-column:1/-1}
   .spec,.chap,.hard,.recharge,.veille,.rolebox,.pitchbox,.story,.pillars,.qual3{grid-template-columns:1fr}
   .chap.flip > .txt{order:0}
@@ -804,7 +804,7 @@ a.prow:hover h3,a.prow:hover .ph2{color:var(--accent-text)}
   .roles > div{border-right:0!important;border-bottom:1px solid var(--line)!important}
   .roles > div:last-child{border-bottom:0!important}
   .path > li{grid-template-columns:1fr 112px;padding-right:0}.plg{height:46px}.plg img{height:30px}.plg.tall img{height:40px}
-  .c-pic,.c-body{grid-column:1/-1}.c-pic{aspect-ratio:4/3;max-height:360px}
+  .c-pic,.c-body{grid-column:1/-1}.c-pic{width:148px}
   .allp{grid-template-columns:1fr auto}.allp-s{display:none}
   .stat{padding:12px 14px;gap:4px}
   .stat > span{font-size:13px;line-height:1.4}
