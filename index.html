@@ -19,7 +19,7 @@
 <script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}
 /* animation d'accueil : une seule fois par visiteur (clé « 1kohm-intro »), jamais en mouvement réduit ; ?intro pour la rejouer en test */
 (function(d,h){var go=false;if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;if(/[?&]intro(?:[=&]|$)/.test(location.search))go=true;else try{if(!localStorage.getItem('1kohm-intro')){localStorage.setItem('1kohm-intro','1');go=true}}catch(e){}if(!go)return;h.classList.add('intro');['plex-mono-500','plex-sans-400'].forEach(function(f){var l=d.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='';l.href='/assets/fonts/'+f+'.woff2';d.head.appendChild(l)});var s=d.createElement('script');s.src='/assets/intro.js?v=20261105';s.async=true;d.head.appendChild(s)})(document,document.documentElement);</script>
-<link rel="stylesheet" href="/assets/site.css?v=20261105">
+<link rel="stylesheet" href="/assets/site.css?v=20261105b">
 <script defer src="https://cloud.umami.is/script.js" data-website-id="324cd797-ee55-44f8-921b-9b1022fabcf0"></script>
 </head>
 <body>
@@ -96,6 +96,13 @@
       </div>
       <p class="intro">Trois projets parmi d'autres. Ouvrez-en un pour entrer dans la conception, ou parcourez-les tous.</p>
       <div class="cards">
+        <a class="card" href="/horloge-du-vent/">
+          <div class="pic" style="background:#FBFAF9"><img loading="lazy" src="/img/horloge/horloge-bleu-marine.jpg" alt="L'Horloge du vent : carte de la côte, trois flèches de spots et trois cadrans de vent" style="object-fit:contain"><img class="alt" loading="lazy" src="/img/horloge/rudy-labo.jpg" style="object-position:65% 45%" alt=""><span class="plogo"><img src="/img/logos/horloge-du-vent.svg" alt="L'Horloge du vent"></span></div>
+          <span class="code-row"><span class="code">PRJ-06 · OBJET CONNECTÉ · 2026</span><span class="ico c-ico" aria-hidden="true"><span class="rig flat"><svg viewBox="0 0 48 48"><path d="M24 8a16 16 0 1 0 .01 0M19 32l5-18 5 18-5-2.5z"/></svg><svg viewBox="0 0 48 48"><path d="M24 8a16 16 0 1 0 .01 0M19 32l5-18 5 18-5-2.5z"/></svg></span></span></span>
+          <h3>L'Horloge du vent</h3>
+          <p>Une horloge murale qui affiche le vent de vos spots sur trois jours. Électronique repensée pour la série, testée avec des agents d'IA.</p>
+          <span class="specs">ESP32 · PAS À PAS · AGENTS IA</span>
+        </a>
         <a class="card" href="/enchanted-tools/">
           <div class="pic"><img src="/img/enchanted/film-runes.jpg" alt="Une créature de l'univers Mirokaï lance les runes lumineuses en l'air"><img class="alt" loading="lazy" src="/img/enchanted/rudy-miroki.jpg" style="object-position:50% 14%" alt=""><span class="plogo"><img src="/img/logos/enchanted-tools.png" alt="Enchanted Tools"></span></div>
           <span class="code-row"><span class="code">PRJ-04 · ROBOTIQUE · 2022</span><span class="ico c-ico" aria-hidden="true"><span class="rig flat"><svg viewBox="0 0 48 48"><path d="M24 8a16 16 0 1 0 .01 0M24 15a3.5 3.5 0 1 0 .01 0M17 24a3.5 3.5 0 1 0 .01 0M31 24a3.5 3.5 0 1 0 .01 0M24 33a3.5 3.5 0 1 0 .01 0"/></svg><svg viewBox="0 0 48 48"><path d="M24 8a16 16 0 1 0 .01 0M24 15a3.5 3.5 0 1 0 .01 0M17 24a3.5 3.5 0 1 0 .01 0M31 24a3.5 3.5 0 1 0 .01 0M24 33a3.5 3.5 0 1 0 .01 0"/></svg></span></span></span>
@@ -109,13 +116,6 @@
           <h3>Le cintre connecté</h3>
           <p>Un cintre qui affiche taille, prix et stock, et fait apporter votre taille en cabine en moins de 5 minutes.</p>
           <span class="specs">THREAD · RFID · BASSE CONSO</span>
-        </a>
-        <a class="card" href="/choose/">
-          <div class="pic" style="background:#E9E9E6"><img loading="lazy" src="/img/choose/produit.jpg" alt="La basket connectée #Choose d'Éram" style="object-fit:contain"><img class="alt" loading="lazy" src="/img/choose/rudy-soudure.jpg" style="object-position:60% 25%" alt=""><span class="plogo"><img src="/img/logos/eram.png" alt="Éram"></span></div>
-          <span class="code-row"><span class="code">PRJ-02 · MODE · 2016</span><span class="ico c-ico" aria-hidden="true"><span class="rig flat"><svg viewBox="0 0 48 48"><path d="M5 31c0-7 2-15 6-15l6 5c5 3 11 4 17 5 6 1 9 3 9 6v3H5zM5 34h38M20 22l3-3M25 24l3-3"/></svg><svg viewBox="0 0 48 48"><path d="M5 31c0-7 2-15 6-15l6 5c5 3 11 4 17 5 6 1 9 3 9 6v3H5zM5 34h38M20 22l3-3M25 24l3-3"/></svg></span></span></span>
-          <h3>#Choose, la chaussure caméléon</h3>
-          <p>Une chaussure qui change de couleur depuis le smartphone. Du prototype au CES de Las Vegas, puis fabriquée en France par Éram.</p>
-          <span class="specs">BLE · FIBRE OPTIQUE · INDUCTION</span>
         </a>
       </div>
       <a class="allp" href="/projets/"><span class="allp-t"><small>./tous-les-projets</small><span>Voir les <span class="js-count">6</span> projets</span></span><span class="allp-s">filtrer par cadre ou technologie</span><span class="allp-a" aria-hidden="true">→</span></a>
