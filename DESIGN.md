@@ -58,7 +58,7 @@ Polices déjà hébergées dans `assets/fonts/`, aucun appel à Google Fonts.
 ## Éléments de signature
 
 - **Barre d'état** tout en haut, en mono 11px : `SYS / 1KOHM.FR / v1.0` · `50.63 N · 3.06 E · LILLE` · `● conseil et expertise` (le point en ambre). Sur téléphone, ne garder que le premier et le dernier élément.
-- **Logo** : `1kΩhm.fr` en Plex Mono 500, le Ω en ambre.
+- **Logo** (depuis le 3 novembre 2026) : l'emblème 1kohm, le code CMS **102** (résistance de 1 kΩ) entre deux terminaisons, avec deux équerres de sérigraphie en haut à droite et en bas à gauche. Dans l'en-tête, SVG intégré au HTML : 102 et équerres en `currentColor` (`--ink`), terminaisons en `--accent`, il suit donc les deux thèmes. 84 px de large sur ordinateur, 64 px sur téléphone, jamais moins de 48 px ; en dessous, le favicon. Zone de protection : 2 T autour (T = largeur d'une terminaison, environ 7 % de la largeur). Le texte est vectorisé : ne jamais le recomposer en HTML. À ne pas faire : déformer ou faire pivoter, ajouter ou déplacer des équerres, colorer le 102, changer la couleur des terminaisons hors accent ou monochrome, ajouter ombre, dégradé ou lueur. Détail et versions : `CHARTE.md` du pack d'identité (hors dépôt). Fichiers du site : `favicon.svg`, `favicon.ico`, `img/marque/`.
 - **Navigation** : `[01] projets  [02] technologies  [03] salons  [04] parcours  [05] contact` (technologies ajouté le 29/10/2026).
 - **Boutons** : texte façon commande, `./voir-les-projets` (fond ambre) et `./me-contacter` (bordure `#3B5249`). Coins droits, pas d'arrondi.
 - **Photos** : elles doivent être mises en valeur. Privilégier celles des appareils SONY, puis FUJIFILM, NIKON ou CANON, et lire les commentaires Finder que Rudy laisse sur ses photos.
@@ -94,6 +94,18 @@ Idées pour la suite, à ne faire qu'avec l'accord de Rudy : #Choose (semelle, c
 - Seulement `transform` et `opacity`.
 - Effets voulus : sobres et originaux. Survol des cartes, léger flottement, carrousel simple qui défile doucement (pause au survol, arrêt avec `prefers-reduced-motion`).
 - Pas d'effet de texte qui se tape lettre par lettre, pas de glitch, pas de parallaxe.
+
+### Exception : l'animation d'accueil (depuis le 5 novembre 2026)
+
+Seule animation autorisée à dépasser une seconde : **2,2 s**, **une seule fois par visiteur**, **sur l'accueil uniquement**.
+
+- Ce qu'elle montre : un gros plan sur des chiffres qui défilent comme des rouleaux, dans le symbole schématique d'une résistance (rectangle, deux pattes, repère R1). La caméra recule pendant que les rouleaux ralentissent et se posent sur 102. Le symbole rétrécit et devient le logo : les pattes se rétractent, les côtés gauche et droit deviennent les terminaisons ambre, le haut et le bas glissent dans les angles pour former les équerres, puis la signature « 1kohm » apparaît. L'image finale reste figée 400 ms, puis le calque disparaît en fondu (350 ms, opacité seule) et il est retiré de la page.
+- Construction : calque plein écran posé par-dessus l'accueil (`aria-hidden="true"`), la page est chargée normalement en dessous. Dessin en coordonnées SVG `0 0 320 180`, celles de l'emblème. Couleurs prises dans `--bg`, `--grid`, `--ink` et `--accent` : le calque suit le thème choisi. Logo en `min(78vw, 600px)` de large, jamais plus haut que 80 % de l'écran. Code : `assets/intro.js`, chargé seulement quand l'animation doit être jouée ; styles en fin de `site.css`.
+- Décision dès le `<head>` d'`index.html` (classe `intro` sur `<html>`, sans flash du contenu). Mémoire : clé localStorage `1kohm-intro`. Si le stockage est indisponible, l'animation n'est pas jouée, pour ne pas la répéter à chaque visite.
+- Un clic, un toucher, une touche ou la molette ferment le calque immédiatement (fondu de 150 ms).
+- `prefers-reduced-motion` : rien ne s'affiche.
+- Pas de bouton « rejouer » sur le site. Pour la revoir en test : ouvrir `/?intro`, ou effacer la clé `1kohm-intro` dans le stockage local du navigateur.
+- Référence exacte : `mix3-reference.html` du pack d'identité (hors dépôt).
 
 ## À éviter
 

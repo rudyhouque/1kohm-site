@@ -51,7 +51,8 @@ assets/site.css            tous les styles (thème clair, thème sombre, couche 
 assets/site.js             catalogue CAT, filtres, visionneuse photo, thème, e-mail anti-robots
 assets/fonts/              polices hébergées localement (aucun appel à Google Fonts)
 img/<projet>/              images déjà compressées
-sitemap.xml, robots.txt, .htaccess, favicon.svg
+sitemap.xml, robots.txt, .htaccess, favicon.svg, favicon.ico
+img/marque/                apple-touch-icon (emblème du logo intégré en SVG dans l'en-tête de chaque page)
 ```
 
 - Deux rubriques à ne pas confondre : **Projets** raconte des projets complets, avec le rôle de Rudy au centre ; **Technologies** rassemble des cas d'usage courts, en vrac, classés par technologie (la fonction d'un capteur ou d'une mesure, le besoin, l'approche proposée). Un cas peut renvoyer à un projet détaillé (par exemple Thread vers le cintre connecté).
