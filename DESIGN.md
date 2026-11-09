@@ -14,7 +14,7 @@ Maquettes de référence (à lire avant tout travail de style) :
 
 Ces fichiers sont au format « canvas » de Claude : du HTML avec des valeurs `{{...}}` calculées par la classe `Component` en bas de fichier. Les traduire en HTML, CSS et JavaScript ordinaires, sans dépendance.
 
-## Couleurs (thème sombre, disponible par le bouton)
+## Couleurs (thème sombre, thème par défaut)
 
 | Rôle | Valeur |
 |---|---|
@@ -33,9 +33,9 @@ Règles :
 - Pas de dégradé décoratif, pas de néon, pas de lueur (glow), pas de glassmorphism.
 - Le quadrillage reste à peine visible. S'il attire l'œil, il est trop fort.
 
-## Thème clair (« tirage papier », thème par défaut)
+## Thème clair (« tirage papier », disponible par le bouton)
 
-Depuis le 13 octobre 2026, le thème clair est le thème par défaut. Le bouton de thème reste disponible pour passer en sombre (le choix de la personne est mémorisé). Le thème clair est la version papier du même plan :
+Depuis le 9 novembre 2026, le thème sombre est de nouveau le thème par défaut (le clair l'était du 13 octobre au 9 novembre). Le bouton de thème permet de passer en clair (le choix de la personne est mémorisé). Le thème clair est la version papier du même plan :
 - fond `#F3F1EA`, quadrillage `rgba(14,21,18,.06)` ;
 - texte `#0E1512`, secondaire `#3D4A45`, libellés `#55655E` ;
 - filets `#D5D2C8` et `#9AA59F` ;
@@ -57,7 +57,8 @@ Polices déjà hébergées dans `assets/fonts/`, aucun appel à Google Fonts.
 
 ## Éléments de signature
 
-- **Barre d'état** tout en haut, en mono 11px : `SYS / 1KOHM.FR / v1.0` · `50.63 N · 3.06 E · LILLE` · `● conseil et expertise` (le point en ambre). Sur téléphone, ne garder que le premier et le dernier élément.
+- **Pas de barre d'état** au-dessus de l'en-tête (retirée le 9 novembre 2026 pour épurer).
+- **Badge de disponibilité** sur le portrait de l'accueil, en haut à gauche : mono 11px majuscules, fond `--bg`, filet `--line`, point en ambre.
 - **Logo** (depuis le 3 novembre 2026) : l'emblème 1kohm, le code CMS **102** (résistance de 1 kΩ) entre deux terminaisons, avec deux équerres de sérigraphie en haut à droite et en bas à gauche. Dans l'en-tête, SVG intégré au HTML : 102 et équerres en `currentColor` (`--ink`), terminaisons en `--accent`, il suit donc les deux thèmes. 84 px de large sur ordinateur, 64 px sur téléphone, jamais moins de 48 px ; en dessous, le favicon. Zone de protection : 2 T autour (T = largeur d'une terminaison, environ 7 % de la largeur). Le texte est vectorisé : ne jamais le recomposer en HTML. À ne pas faire : déformer ou faire pivoter, ajouter ou déplacer des équerres, colorer le 102, changer la couleur des terminaisons hors accent ou monochrome, ajouter ombre, dégradé ou lueur. Détail et versions : `CHARTE.md` du pack d'identité (hors dépôt). Fichiers du site : `favicon.svg`, `favicon.ico`, `img/marque/`.
 - **Navigation** : `[01] projets  [02] technologies  [03] salons  [04] parcours  [05] contact` (technologies ajouté le 29/10/2026).
 - **Boutons** : texte façon commande, `./voir-les-projets` (fond ambre) et `./me-contacter` (bordure `#3B5249`). Coins droits, pas d'arrondi.
@@ -106,6 +107,23 @@ Seule animation autorisée à dépasser une seconde : **2,2 s**, **une seule foi
 - `prefers-reduced-motion` : rien ne s'affiche.
 - Pas de bouton « rejouer » sur le site. Pour la revoir en test : ouvrir `/?intro`, ou effacer la clé `1kohm-intro` dans le stockage local du navigateur.
 - Référence exacte : `mix3-reference.html` du pack d'identité (hors dépôt).
+
+## Téléphone (règles du 9 novembre 2026)
+
+Ce qui passe sur ordinateur n'est pas toujours adapté au téléphone. Sur téléphone, la page doit montrer l'essentiel vite.
+
+- **Rangées qui défilent** : une suite de cartes ou de photos ne s'empile pas. Elle défile à l'horizontale, et la carte suivante dépasse à droite, coupée par l'écran, pour inviter à faire glisser (deux petites tuiles + une coupée, ou une grande carte + une coupée). Accroche magnétique (`scroll-snap`), pas de barre de défilement, pas de flèches.
+- **Le bouton « voir tout »** se voit juste sous la rangée.
+- **La page elle-même ne glisse jamais de côté** : seules les rangées défilent. Toute grille qui contient une rangée prend des colonnes `minmax(0,1fr)` (sinon elle s'élargit et la page entière bouge).
+- **Boutons d'action côte à côte**, sur toute la largeur.
+- **Chiffres clés** : seulement le chiffre et son libellé, sans phrase. Retirer ce qui est secondaire.
+- **Récits longs** repliés après quatre lignes, avec `./lire-la-suite`. Le texte reste dans la page.
+- Espacements resserrés entre les sections.
+
+## Contenu contextuel et visuels
+
+- Pas de bloc général qui mélange tout : un texte lié à un salon, un projet ou un onglet s'affiche avec lui (exemple : le bandeau `.sal-band` de chaque onglet de /salons/).
+- Un bloc illustré l'est par un vrai logo ou une vraie photo, pris dans `Ressources/`. Dans une même rangée, tous les blocs ont un visuel, ou aucun.
 
 ## À éviter
 

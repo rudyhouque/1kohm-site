@@ -80,7 +80,7 @@ document.addEventListener('keydown',e=>{
   else if(e.key==="Tab"){const b=[...lb.querySelectorAll('button')],i=b.indexOf(document.activeElement);e.preventDefault();b[(i+(e.shiftKey?-1:1)+b.length)%b.length].focus()}
 });
 
-// thème : « tirage papier » par défaut (data-theme="light" sur <html>), sombre en option
+// thème : sombre par défaut (data-theme="dark" sur <html>), « tirage papier » clair en option
 const btn=document.getElementById('themeBtn'),root=document.documentElement;
 function isDark(){return root.getAttribute('data-theme')!=="light"}
 function label(){btn.textContent=isDark()?"mode clair":"mode sombre";btn.setAttribute('aria-pressed',String(!isDark()))}
@@ -180,6 +180,11 @@ const show=id=>{tabs.forEach(t=>{const on=t.getAttribute('aria-controls')===id;t
 tabs.forEach((t,i)=>{t.addEventListener('click',()=>{show(t.getAttribute('aria-controls'));history.replaceState(null,'','#'+t.getAttribute('aria-controls'))});
 t.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){const n=tabs[(i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length];n.focus();n.click()}})});
 show(location.hash==='#vivatech'?'vivatech':'ces')})();
+
+// salons sur téléphone : les récits longs sont repliés après quelques lignes (le CSS ne plie qu'en dessous de 640 px)
+document.querySelectorAll('#p-salons .tl .body').forEach(b=>{const ps=[...b.children].filter(e=>e.tagName==='P'&&!e.classList.contains('ed-cta'));if(!ps.length||ps.reduce((n,p)=>n+p.textContent.length,0)<350)return;
+b.classList.add('plie');const btn=document.createElement('button');btn.type='button';btn.className='suite';btn.setAttribute('aria-expanded','false');btn.textContent='./lire-la-suite';ps[ps.length-1].after(btn);
+btn.addEventListener('click',()=>{b.classList.remove('plie');btn.remove()})});
 
 // filtres repliés : quelques lignes de cases, puis « + N autres » (Projets, Technologies)
 (()=>{

@@ -1,6 +1,6 @@
 # Site 1kohm.fr · instructions pour Claude Code
 
-Site portfolio de Rudy Houque, directeur technique spécialisé en objets connectés, ancien cofondateur et directeur technique de BLUEGRioT, aujourd'hui en conseil et expertise. Il s'adresse à des recruteurs et à des dirigeants qui veulent lui confier une mission. En arrivant, ils doivent voir un profil senior, solide, sérieux, expérimenté et facile à rencontrer.
+Site portfolio de Rudy Houque, directeur technique spécialisé en objets connectés, ex-cofondateur et ex-directeur technique de BLUEGRioT, disponible pour un poste ou une mission. Il s'adresse à des recruteurs et à des dirigeants qui veulent lui confier une mission. En arrivant, ils doivent voir un profil senior, solide, sérieux, expérimenté et facile à rencontrer.
 
 Cadrage complet (cible, chiffres, reconnaissances, sources) : `_atelier/PRODUCT.md`.
 
@@ -49,7 +49,7 @@ technologies/index.html    rubrique Technologies : cas d'usage filtrables par te
 mentions-legales/index.html
 404.html
 assets/site.css            tous les styles (thème clair, thème sombre, couche « projet » via body.deep)
-assets/site.js             catalogue CAT, filtres, visionneuse photo, thème, e-mail anti-robots
+assets/site.js             catalogue CAT, filtres, visionneuse photo, thème, e-mail anti-robots (inutilisé)
 assets/fonts/              polices hébergées localement (aucun appel à Google Fonts)
 img/<projet>/              images déjà compressées
 sitemap.xml, robots.txt, .htaccess, favicon.svg, favicon.ico
@@ -103,9 +103,11 @@ Logos et icônes : avant de dessiner l'icône d'un projet ou d'un salon, cherche
 - Chaque projet a un fichier `Sources/ne-pas-publier.md` dans `~/PortfolioWeb/Ressources/Projets/<projet>/`. Le lire avant toute modification de ce projet. Rien de ce qu'il contient ne doit apparaître sur le site, même reformulé.
 - Vérifier les photos : pas de référence de puce lisible, pas de nom, pas de document personnel en arrière-plan. Flouter ou recadrer si besoin.
 
-## Positionnement de Rudy (décision du 13 octobre 2026)
+## Positionnement de Rudy (décision du 9 novembre 2026, remplace celle du 13 octobre)
 
-- Position claire, sans hésitation : **conseil et expertise** en objets connectés, sur des missions, comme une structure qui propose ses services. Ne plus écrire « prochaine étape », ni hésiter entre poste en équipe et conseil.
+- Disponible **pour un poste ou une mission** : direction technique ou R&D en équipe, ou conseil et expertise en objets connectés. Les deux s'affichent avec assurance, comme un choix ouvert, jamais comme une hésitation (pas de « prochaine étape »).
+- Badge sur la photo de l'accueil : « disponible · poste ou mission ».
+- BLUEGRioT est au passé partout : « ex-cofondateur », « ex-directeur technique », « de 2016 à 2026 ». Un lecteur ne doit jamais croire que Rudy y travaille encore.
 - Dans le parcours, 2026 s'intitule « Conseil et expertise ».
 - Appel à l'action final : « Parlons de votre prochain projet ».
 - Ne jamais inventer de client, de mission, de tarif ni de référence depuis 2026. Forme juridique, SIRET, raison sociale de 1kohm : ne rien écrire sans confirmation de Rudy (mentions légales comprises).
@@ -115,7 +117,7 @@ Logos et icônes : avant de dessiner l'icône d'un projet ou d'un salon, cherche
 ## Contact
 
 - LinkedIn : https://www.linkedin.com/in/rudyhouque/
-- E-mail : hello@1kohm.fr, affiché par JavaScript (liens `a.mail` avec `data-u` et `data-d`) pour limiter le spam. Ne jamais l'écrire en clair dans le HTML.
+- Pas d'adresse e-mail sur le site (retirée le 9 novembre 2026 : Rudy n'a pas accès à hello@1kohm.fr). Le seul contact est LinkedIn. Le code `a.mail` de site.js reste disponible si une adresse revient.
 - Mesure d'audience : Umami (cloud.umami.is), sans cookie ni donnée personnelle. Mentionné dans les mentions légales. Aucun autre cookie.
 
 ## Suivi Umami (impératif)

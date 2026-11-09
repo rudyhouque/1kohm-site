@@ -6,7 +6,7 @@
 @font-face{font-family:"IBM Plex Mono";src:url("/assets/fonts/plex-mono-500.woff2") format("woff2");font-weight:500;font-display:swap}
 
 /* Style C, « couche technique cyber » : voir DESIGN.md.
-   Thème clair « tirage papier » par défaut (data-theme="light" posé sur <html>), thème sombre via data-theme="dark". */
+   Thème sombre par défaut (data-theme="dark" posé sur <html>), thème clair « tirage papier » via data-theme="light". */
 :root{
   --bg:#0B100F;
   --grid:rgba(143,168,158,.07);
@@ -66,7 +66,7 @@
 /* ===== BASE ===== */
 *{box-sizing:border-box}
 [hidden]{display:none!important}
-html{-webkit-text-size-adjust:100%;scroll-padding-top:24px}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:24px;overflow-x:clip} /* sécurité : la page elle-même ne glisse jamais de côté, seuls les rails .aw-row, .cards, .vt-row défilent */
 body{
   margin:0;min-height:100vh;display:flex;flex-direction:column;
   background-color:var(--bg);
@@ -93,9 +93,7 @@ img{display:block;max-width:100%}
 .eyebrow b{font-weight:500;color:var(--accent-text)}
 .todo{background:color-mix(in srgb,var(--accent) 30%,transparent);padding:0 4px;font-style:italic}
 
-/* ===== BARRE D'ÉTAT, EN-TÊTE ===== */
-.sysbar .wrap > div{display:flex;justify-content:space-between;align-items:center;gap:var(--s4);min-height:34px;border-bottom:1px solid var(--line);font:400 11px/1.3 var(--f-mono);letter-spacing:.06em;color:var(--label)}
-.sysbar .dot{font-style:normal;color:var(--accent)}
+/* ===== EN-TÊTE ===== */
 .top{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:var(--s4) var(--s6);min-height:80px;padding-block:var(--s3)}
 /* Emblème 1kohm (102 + terminaisons + équerres), SVG intégré : voir DESIGN.md et CHARTE.md.
    Zone de protection (2 T, soit 11 px à 84 px de large) laissée libre par la grille de l'en-tête. */
@@ -142,18 +140,22 @@ figcaption{font:400 13px/1.45 var(--f-body);color:var(--label);margin-top:8px}
 .hero .name{font-size:clamp(52px,8.4vw,112px);font-weight:700;line-height:.92;letter-spacing:-.035em}
 .hero .role{font:500 clamp(13px,1.3vw,15px)/1.4 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--accent-text)}
 .hero .role i{font-style:normal;color:var(--label)}
+.hero .metiers{font:400 clamp(13px,1.25vw,15px)/1.5 var(--f-mono);letter-spacing:.02em;color:var(--ink-2);margin-top:-6px}
+.hero .metiers i{font-style:normal;color:var(--label)}
 .tagline{font:600 clamp(22px,2.2vw,30px)/1.22 var(--f-display);font-stretch:92%;letter-spacing:-.01em;text-wrap:balance;margin:0;max-width:24em}
 .tagline span{color:var(--accent)}
 .lede{font-size:18px;line-height:1.6;color:var(--ink-2);max-width:36em}
 .portrait{grid-column:9 / span 4;margin:10px 10px 44px 0;position:relative;min-height:420px}
 .portrait .scan{position:absolute;inset:0;overflow:hidden;background:var(--ph)}
 .portrait .scan::after{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,var(--scan) 0 1px,transparent 1px 3px);pointer-events:none}
-.portrait img{width:100%;height:100%;object-fit:cover;object-position:62% 40%;filter:grayscale(.85) contrast(1.1) brightness(.9)}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:62% 40%;filter:saturate(.92) contrast(1.04)}
 .portrait i{position:absolute;width:22px;height:22px;border:0 solid var(--accent)}
 .portrait .c1{left:-10px;top:-10px;border-left-width:2px;border-top-width:2px}
 .portrait .c2{right:-10px;top:-10px;border-right-width:2px;border-top-width:2px}
 .portrait .c3{left:-10px;bottom:-10px;border-left-width:2px;border-bottom-width:2px}
 .portrait .c4{right:-10px;bottom:-10px;border-right-width:2px;border-bottom-width:2px}
+.portrait .dispo{position:absolute;left:12px;bottom:12px;z-index:1;display:inline-flex;align-items:center;gap:8px;padding:7px 10px;background:var(--bg);border:1px solid var(--line);font:500 11px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink)}
+.portrait .dispo i{position:static;width:auto;height:auto;border:0;font-style:normal;font-size:9px;color:var(--accent)}
 .portrait figcaption{position:absolute;left:0;bottom:-36px;margin:0;font:400 11px/1.3 var(--f-mono);color:var(--label)}
 
 /* panneau de chiffres (accueil, pages projet, salons) */
@@ -261,6 +263,7 @@ section.block{padding-top:clamp(64px,8vw,96px)}
 
 /* distinctions */
 .awards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--col-gap);padding-top:clamp(56px,7vw,72px)}
+.aw-row,.vt-row{display:contents}
 .aw-head{grid-column:1/-1;font:500 12px/1 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent-text);margin-bottom:-6px}
 .aw{display:flex;flex-direction:column;border:1px solid var(--line);background:var(--panel);text-decoration:none;color:var(--ink);min-width:0;transition:border-color 200ms ease,transform 200ms var(--ease-out)}
 .aw-pic{position:relative;margin:0;aspect-ratio:16/10;overflow:hidden;background:var(--ph);border-bottom:1px solid var(--line)}
@@ -682,7 +685,7 @@ a.prow:hover h3,a.prow:hover .ph2{color:var(--accent-text)}
 .v-tiles .v-cta{margin-top:16px;grid-template-columns:1fr auto}.v-cta .allp-s{display:none}
 .j-name{display:block;font-size:max(15px,.62em);letter-spacing:-.005em;color:var(--ink-2);margin-bottom:4px}
 @media (hover:hover){.v-pic:hover img{transform:scale(1.03)}}
-@media (max-width:900px){.veille2{grid-template-columns:1fr}.judge-band{grid-template-columns:1fr}.j-logo{padding-right:0;border-right:0}}
+@media (max-width:900px){.veille2{grid-template-columns:minmax(0,1fr)}.veille2 > *{min-width:0}.judge-band{grid-template-columns:1fr}.j-logo{padding-right:0;border-right:0}}
 @media (prefers-reduced-motion:reduce){.sp{opacity:.8;transform:none}.shine{color:var(--ink);background:none}}
 
 /* projets à détailler plus tard : plus discrets, sans lien */
@@ -788,7 +791,6 @@ a.prow:hover h3,a.prow:hover .ph2{color:var(--accent-text)}
   .sfgrid{grid-template-columns:1fr}
   .sf{padding:16px}
   body{font-size:16px}
-  .sysbar .sys-geo{display:none}
   .lay-head span{margin-left:0;flex-basis:100%}
   .head h2 b{display:block;margin:0 0 6px}
   .portrait{grid-column:1/-1;max-height:360px;margin-right:10px}
@@ -816,10 +818,87 @@ a.prow:hover h3,a.prow:hover .ph2{color:var(--accent-text)}
   .lb{padding:56px 12px 80px}
   .lb .nav-b{top:auto;bottom:16px;transform:none}
   .ex-stage{min-height:400px}
-  .sysbar .wrap > div{font-size:11px;letter-spacing:0;gap:8px}
-  .sysbar span{white-space:nowrap}
   .ex-tag{display:none}
   .ex-note{right:12px;bottom:12px}
+}
+/* ===== ACCUEIL SUR TÉLÉPHONE (9 novembre 2026) =====
+   Page plus courte : boutons côte à côte, chiffres sans légende, et défilement horizontal pour les
+   reconnaissances, les projets et la veille. La carte suivante dépasse à droite pour inviter à faire glisser. */
+@media (max-width:640px){
+  .hero{row-gap:var(--s5);padding-top:24px}
+  .hero-txt{gap:20px}
+  .lede{font-size:16px;line-height:1.55}
+  .ctas{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}
+  .ctas .btn{justify-content:center;padding:0 8px;min-height:46px;font-size:clamp(11px,3.3vw,12.5px);white-space:nowrap;min-width:0}
+  .stats{margin-top:32px}
+  .stat > span,.stat.s-annees{display:none}
+  .stat,.stat:nth-of-type(2){border-bottom:0}
+  .stat:nth-of-type(2){border-right:0}
+  .awards{display:block;padding-top:40px}
+  .aw-head{margin:0 0 12px}
+  section.block{padding-top:48px}
+  .awards,#projets,.v-tiles{min-width:0}
+  .aw-row,#projets .cards,.vt-row{display:grid;grid-auto-flow:column;grid-template-columns:none;gap:10px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-padding-inline:var(--gutter);margin-inline:calc(var(--gutter) * -1);padding-inline:var(--gutter);scrollbar-width:none}
+  .aw-row::-webkit-scrollbar,#projets .cards::-webkit-scrollbar,.vt-row::-webkit-scrollbar{display:none}
+  .aw-row > *,#projets .cards > *,.vt-row > *{scroll-snap-align:start}
+  .aw-row{grid-auto-columns:calc((100% - 20px) / 2.25)}
+  .aw-t > span{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  .aw-play{left:8px;bottom:8px;width:30px;height:30px}.aw-play svg{width:20px;height:20px}
+  #projets .cards{grid-auto-columns:84%}
+  #projets .allp{margin-top:var(--s4)}
+  .v-tiles{border-top:0}
+  .vt-row{grid-auto-columns:78%;margin-bottom:2px}
+  .vt-row .vt{padding:14px;border:1px solid var(--line);background:var(--panel)}
+  .v-tiles .v-cta{margin-top:var(--s4)}
+}
+/* Salons : bandeau propre au salon choisi (logo officiel ou photo réelle, jamais d'icône dessinée) et offre de restitution */
+.sal-band{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(16px,3vw,32px);align-items:center;padding:20px 24px;margin-bottom:var(--s6);border:1px solid var(--line);background:var(--panel);box-shadow:inset 3px 0 0 var(--accent)}
+.sb-vis{margin:0;min-width:0}
+.sb-vis.logo{width:clamp(110px,14vw,170px)}
+.sb-ces{display:block;width:100%;height:auto;fill:var(--ink)}
+.sb-vis.photo{width:clamp(120px,16vw,190px);aspect-ratio:4/3;border:1px solid var(--line)}
+.sb-txt{display:flex;flex-direction:column;gap:6px;min-width:0}
+.sb-eye{font:500 11px/1.3 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent-text)}
+.sb-title{font:600 clamp(20px,2.2vw,26px)/1.15 var(--f-display);font-stretch:92%;letter-spacing:-.01em;color:var(--ink)}
+.sb-sub{color:var(--ink-2);font-size:15px;line-height:1.5;max-width:40em}
+.sb-judge{color:var(--ink-2);font-size:15px}.sb-judge b{color:var(--accent-text);font-weight:600}
+section.offre{padding-top:clamp(56px,7vw,88px)}
+.offre .allp{margin-top:var(--s5)}
+@media (max-width:640px){
+  .sal-band{grid-template-columns:88px minmax(0,1fr);gap:14px;padding:14px 14px 14px 16px;margin-bottom:var(--s4);align-items:start}
+  .sb-vis.logo,.sb-vis.photo{width:88px}
+  .sb-vis.logo{padding-top:4px}
+  .sb-title{font-size:19px}
+  .sb-sub{font-size:14px}
+  section.offre{padding-top:48px}
+}
+
+/* ===== SALONS SUR TÉLÉPHONE (9 novembre 2026) =====
+   Mêmes principes que l'accueil : rangées qui défilent avec la carte suivante coupée à droite,
+   une rangée de photos par édition au lieu d'une mosaïque, récits longs repliés (bouton posé par site.js). */
+.suite{display:none}
+@media (max-width:640px){
+  #p-salons .p-hero{padding-block:24px;row-gap:var(--s4)}
+  #p-salons .p-hero p{font-size:16px;line-height:1.55}
+  #p-salons .p-hero > .pic{aspect-ratio:16/9}
+  #p-salons .qual3,#p-salons .tl .mosaic{display:grid;grid-auto-flow:column;grid-template-columns:none;gap:10px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-padding-inline:var(--gutter);margin-inline:calc(var(--gutter) * -1);padding-inline:var(--gutter);scrollbar-width:none}
+  #p-salons .qual3::-webkit-scrollbar,#p-salons .tl .mosaic::-webkit-scrollbar{display:none}
+  #p-salons .qual3 > *,#p-salons .tl .mosaic > *{scroll-snap-align:start}
+  #p-salons .qual3{grid-auto-columns:80%}
+  #p-salons .qual3 > div{padding:12px 14px 14px;border:1px solid var(--line);border-top:2px solid var(--line-2);background:var(--panel)}
+  #p-salons .qual3 > div:first-child{border-top-color:var(--accent)}
+  #p-salons .sal-tabs{margin-top:var(--s5)}
+  #p-salons .lay{padding-top:var(--s5)}
+  #p-salons .lay-head{margin-bottom:var(--s4)}
+  #p-salons .tl,#p-salons .tl > li{grid-template-columns:minmax(0,1fr)}
+  #p-salons .tl > li,#p-salons .lay,#p-salons .tl .body{min-width:0}
+  #p-salons .tl > li{padding-block:22px;gap:12px}
+  #p-salons .tl .mosaic{grid-auto-columns:78%;padding-block:4px}
+  #p-salons .tl .mosaic:has(> :only-child){grid-auto-columns:100%}
+  #p-salons .tl .mosaic .pic,#p-salons .tl .mosaic .big,#p-salons .tl .mosaic .wide{grid-column:auto;grid-row:auto;aspect-ratio:4/3}
+  #p-salons .plie > p:not(.ed-cta) ~ p:not(.ed-cta){display:none}
+  #p-salons .plie > p:not(.ed-cta){display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+  #p-salons .suite{display:inline-flex;align-self:flex-start;align-items:center;min-height:40px;padding:0 14px;margin-top:-4px;border:1px solid var(--line-2);background:transparent;font:500 12.5px/1 var(--f-mono);color:var(--accent-text);cursor:pointer}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
